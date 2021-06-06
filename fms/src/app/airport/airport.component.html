@@ -1,0 +1,85 @@
+<head>
+  <style>
+    body{
+      background-color: powderblue;
+      background-size: cover;
+      height: 720px;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid gray;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-header">
+          <a class="navbar-brand" routerLink="/adminhome">Home</a>
+          <a class="navbar-brand" routerLink="/addairportdetails">Add Airport</a>
+      </div>
+  </nav>
+  </div>
+
+  <div class="container">
+<h2 align='center'>List of Airports</h2>
+<table class="table table-striped table-dark">
+  <tr>
+    <th>Airport IDddddddddddddd</th>
+    <th>Airport Name</th>
+    <th>Airport Location</th>
+    </tr>
+    <tr *ngFor="let airport of airports  | async">
+        <td>{{airport.airportid}}</td>
+        <td>{{airport.airportName}}</td>
+        <td>{{airport.airportLocation}}</td>
+    </tr>
+</table>
+</div><br>
+
+<div *ngIf ="errors" class="alert alert-danger" role="alert" style="text-align: center;">
+  <strong>An Error Occurred :-</strong>
+ {{errors}} !!!!</div> <br>
+
+<div class="container">
+  <div class="col-md-offset-2 col-md-7">
+
+<form (ngSubmit)="detail(airport.airportid)"> 
+  <div class="form-group">
+    <label for="airportid">Search Airport Details</label>
+    <input type="number" class="form-control" id="airportid" required [(ngModel)]="airport.airportid" name="airportid">
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form></div></div>
+
+<br>
+<div class="container">
+<div *ngIf="airport.airportid>0">
+ <h3 align='center'>Airport Details</h3>
+    <table class="table table-striped table-dark">
+      <tr>
+    <th>Airport ID</th>
+    <th>Airport Name</th>
+    <th>Airport Location</th>
+      </tr>
+      <tr>
+        <td>{{airport.airportid}}</td>
+        <td>{{airport.airportName}}</td>
+        <td>{{airport.airportLocation}}</td>
+      </tr>
+    </table>
+  </div>
+  </div>
+  </body>
