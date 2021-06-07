@@ -1,0 +1,84 @@
+<body>
+
+    <!-- <nav align='center'><a routerLink="/createbooking">Booking</a></nav> -->
+    <div>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" routerLink="/createbooking">Booking</a>
+                <a class="navbar-brand" routerLink="#">Booking History</a>
+                <a class="navbar-brand" routerLink="/userprofile">User Profile</a>
+                <a class="navbar-brand" routerLink="/logout">Logout</a>
+            </div>
+        </nav>
+
+        <div class="jumbotron"
+            style="color: blanchedalmond; background-image: url(https://wallpaperaccess.com/full/254361.jpg);">
+            <h1 align='center'>Welcome To Airline Services</h1>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="booking-form-box">
+            <form (ngSubmit)="getScheduledFlightByAirport()" [formGroup]="addForm">
+                <div class="booking-form">
+                    <div class="row">
+                        <div class="col-md-4">
+                    <label>Flying From</label>
+                    <select class="form-control" formControlName="source" id="power1" required
+                        [(ngModel)]="scheduledFlight.source">
+                        <option *ngFor="let pow of city" [value]="pow">{{pow}}</option>
+                    </select></div>
+                    <div class="col-md-4">
+                    <label>Flying To</label>
+                    <select class="form-control" formControlName="destination" id="power2" required
+                        [(ngModel)]="scheduledFlight.destination">
+                        <option *ngFor="let pow of city" [value]="pow">{{pow}}</option>
+                    </select>
+                </div>
+                <div class="input-grp">
+                    <div class="col-md-4">
+                    <label>Departing</label>
+                    <input type="date" formControlName="schdate" [(ngModel)]="scheduledFlight.schdate"
+                        class="form-control select-date">
+                </div></div></div><br><br>
+
+                <div class="container">
+                 <div class="row" align="center">
+                        <div class="col-md-4">
+                            <div class="form-btn" align="center">
+                                <button class="btn btn-primary" align="center">Show Flights</button>
+                            </div>
+                        </div>
+                    </div></div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div *ngIf="scheduledFlight.schdate">
+    <h2>Available Flights</h2>
+    <table class="table">
+        <tr>
+            <th>Flight Id</th>
+            <th>Carrier Name</th>
+            <th>Flight Model</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Fares</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let sch of schFlights">
+            <td>{{sch.flight.flightId}}</td>
+            <td>{{sch.flight.carrierName}}</td>
+            <td>{{sch.flight.flightModel}}</td>
+            <td>{{sch.schedule.departureTime | date:'d/M/yy, h:mm a'}}</td>
+            <td>{{sch.schedule.airrivalTime | date:'d/M/yy, h:mm a'}}</td>
+            <td>{{sch.fares}}</td>
+            <!-- <td><button  (click)='detail(f.flightId)' class="btn btn-info">Detail</button></td> -->
+            <td><button class="btn btn-info" (click)='jump(sch.scheduleFlightId)'>Book Tickets</button></td>
+        </tr>
+    </table></div></div>
+</body>
+<br /><br /><br /><br /><br />

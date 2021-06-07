@@ -1,0 +1,81 @@
+<app-nav></app-nav>
+<body>
+    <h3 align="center">Ticket Details</h3>
+    <div class="container">
+          <div class="row">
+        <div class="col-md"><b>Booking Date</b></div>
+        <div class="col-md"><b>Ticket Cost</b></div>
+        <div class="col-md"><b>Booking ID</b></div>
+        <div class="col-md"><b>UserName for Booking</b></div>
+      </div>
+    <div class="row">
+        <div class="col-md">{{ bookingdetails.bookingDate | date:'d/M/yy'}} </div>
+        <div class="col-md">Rs.{{ bookingdetails.ticketCost}}</div>
+        <div class="col-md">{{bookingdetails.bookingId}}</div>
+        <div class="col-md">{{bookingdetails.userId.userName}}</div>
+      </div>
+      <div class="row">
+        <div class="col"><b>Source Airport</b></div>
+        <div class="col"><b>Source Airport Name</b></div>
+        <div class="col"><b>Destination Airport</b></div>
+        <div class="col"><b>Destination Airport Name</b></div>
+      </div>
+      <div class="row">
+        <div class="col">{{schflight.schedule.sourceAirport.airportLocation}} </div>
+        <div class="col">{{schflight.schedule.sourceAirport.airportName}} </div>
+        <div class="col">{{schflight.schedule.destinationAirport.airportLocation}}</div>
+        <div class="col">{{schflight.schedule.destinationAirport.airportName}}</div>
+      </div>
+      <div class="row">
+        <div class="col"><b>Departure Date  & Time </b></div>
+        <div class="col"><b>Arrival Date & Time</b></div>
+      </div>
+      <div class="row">
+        <div class="col">{{schflight.schedule.departureTime | date:'d/M/yy, h:mm a'}} </div>
+        <div class="col">{{schflight.schedule.airrivalTime | date:'d/M/yy, h:mm a'}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><b>Flight Company</b></div>
+        <div class="col-md-4"><b>Flight Model</b></div>
+      </div>
+    <div class="row">
+        <div class="col-md-4">{{ schflight.flight.carrierName}} </div>
+        <div class="col-md-4">{{ schflight.flight.flightModel }}</div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <label><b>PNR Number</b></label>
+        </div> 
+        <div class="col-md">
+          <label for="psgrname"><b>Passenger Name</b></label>
+        </div> 
+        <div class="col-md">
+          <label for="age"><b>Age</b></label>
+        </div> 
+        <div class="col-md">
+          <label for="psgruin"><b>Passenger UIN</b></label>
+        </div> 
+        <div class="col-md">
+          <label for="luggage"><b>Luggage</b></label>
+        </div> 
+      </div>
+      <div *ngFor="let p of bookingdetails.passengerList">
+      <div class="row" >
+        <div class="col-md">
+          <label>{{p.pnrNumber}}</label>
+        </div> 
+        <div class="col-md">{{p.passengerName}}</div> 
+        <div class="col-md">
+          {{p.age}}
+        </div> 
+        <div class="col-md">
+          {{p.passengerUIN}}
+        </div> 
+        <div class="col-md">
+          {{p.luggage}}
+        </div> 
+      </div>
+    </div>
+  </div>
+</body>
+

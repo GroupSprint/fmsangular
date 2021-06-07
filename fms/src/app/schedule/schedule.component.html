@@ -1,0 +1,89 @@
+<head>
+  <style>
+    body{
+      background-color: powderblue;
+      background-size: cover;
+      height: 100%;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-header">
+          <a class="navbar-brand" routerLink="/adminhome">Home</a>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+            <div class="col-md-offset-2 col-md-7">
+              <h2 class="text-center">Adding New Schedule</h2><br>
+
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <div class="panel-title">Add Schedule</div>
+                </div>
+                <div class="panel-body">
+
+        <form [formGroup]="addForm" (ngSubmit)="createschedule()">
+        <div class="form-group">
+            <label for="arrivaltime">Arrival Day & Time:</label>
+            <input type='datetime' formControlName="arrivaltime" name="arrivaltime" class="form-control" id="arrivaltime"/>
+    </div>
+    <div class="form-group">
+      <label for="departuretime">Departure Day & Time:</label>
+      <input type='datetime' formControlName="departuretime" name="departuretime" class="form-control" id="departuretime"/>
+</div>
+<div class="form-group">
+  <label for="sairportid">Source Airport ID:</label>
+  <input type='number' formControlName="sairportid" name="sairportid" class="form-control" id="sairportid"/>
+</div>
+<div class="form-group">
+  <label for="dairportid">Destination Airport ID:</label>
+  <input type='number' formControlName="dairportid" name="dairportid" class="form-control" id="dairportid"/>
+</div>
+        <div class="form-group">
+            <input type="submit" class="btnSubmit" />
+        </div>
+    </form>
+</div>
+</div></div></div>
+
+<div class="container">
+<h2 align='center'>Here your Schedule List!</h2>
+<table class="table table-striped table-dark"> 
+    <tr>
+    <th>Schedule ID</th>
+    <th>Arrival Time</th>
+    <th>Departure Time</th>
+    <th>Source Airport</th>
+    <th>Destination Airport</th>
+  </tr>
+
+    <tr *ngFor="let sch of schedules">
+    <td>{{ sch.scheduleId }} </td>
+     <td>{{ sch.airrivalTime | date:'h:mm a'}}</td>
+      <td>{{ sch.departureTime | date:'h:mm a'}}</td>
+      <td>{{ sch.sourceAirport.airportName }}</td>
+      <td>{{ sch.destinationAirport.airportName}}</td>
+    </tr>
+  </table>
+</div>
+</body>

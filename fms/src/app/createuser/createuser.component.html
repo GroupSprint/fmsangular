@@ -1,0 +1,56 @@
+<head>
+  <style>
+      body{
+        background-color: powderblue;
+        background-size: cover;
+        height: 657px;
+      }
+  </style>
+  </head>
+<body style="background-color: powderblue;">
+<div class="container">
+  <div class="col-md-offset-2 col-md-7">
+    <h2 class="text-center">User Registration</h2>
+    <br>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">Add User</div>
+      </div>
+      <div class="panel-body">
+
+    <form [formGroup]="addForm" (ngSubmit)="saveuser()">
+      <div class="form-group">
+        <label for="name">User Name</label>
+        <input type="text" formControlName="userName" class="form-control" id="userName" required [(ngModel)]="user.userName" name="userName">
+        <small *ngIf="Submitted && addForm.controls.userName.errors?.required">Give User Name</small>
+        <small *ngIf="Submitted && addForm.controls.userName.errors?.minLength">Name length must be 3 char long</small>
+      </div>
+  
+      <div class="form-group">
+        <label for="name">User Password</label>
+        <input type="password" formControlName="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+        <small *ngIf=" Submitted && addForm.controls.password.errors?.required">Password is required</small>
+        <small *ngIf=" Submitted && addForm.controls.password.errors?.minLength">Password length must be 6</small>
+      </div>
+  
+
+      <div class="form-group">
+        <label for="name">User Email</label>
+        <input type="email" formControlName="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email">
+        <small *ngIf="addForm.controls.email.errors?.required">Email address is required.</small>
+        <small *ngIf="addForm.controls.email.errors?.email">Email must be a valid email address.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="name">User Mobile Number</label>
+        <input type="tel" formControlName="mobileNumber" class="form-control" id="mobileNumber" required [(ngModel)]="user.mobileNumber" name="mobileNumber">
+        <small *ngIf=" Submitted && addForm.controls.mobileNumber.errors?.required">Give Mobile Number</small>
+        <small *ngIf=" Submitted && addForm.controls.mobileNumber.errors?.minLength">Mobile Number length must be 10</small>
+        <small *ngIf=" Submitted && addForm.controls.mobileNumber.errors?.maxLength">Mobile Number length must be 10</small>
+      </div>
+      <button type="submit" class="btn btn-primary">SignUp</button>
+    </form><br/></div></div>
+    <p>Already have an account? <a routerLink="/Login">Sign in</a>.</p>
+  </div>
+  </div>
+</body>

@@ -1,0 +1,54 @@
+<head>
+  <style>
+    body{
+      background-color: powderblue;
+      background-size: cover;
+      height: 657px;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-header">
+          <a class="navbar-brand" routerLink="/adminhome">Home</a>
+      </div>
+  </nav>
+</div>
+
+  <div class="container">
+<h2 align='center'>List of Users</h2><br>
+<table class="table table-striped table-dark">
+  <tr>
+    <th>User ID</th>
+    <th>User Type</th>
+    <th>User Name</th>
+    <th>User Password</th>
+    <th>User Email</th>
+    <th>User mobileNumber</th>
+  </tr>
+    <tr *ngFor="let u of users">
+      <td>{{ u.userId }} </td>
+      <td>{{ u.userType }}</td>
+      <td>{{ u.userName }}</td>
+      <td>{{ u.password }}</td>
+      <td>{{ u.email}}</td>
+      <td>{{ u.mobileNumber}}</td>
+    </tr>
+  </table></div>
+</body>

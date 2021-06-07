@@ -1,0 +1,48 @@
+<body>
+    <br/><br/>
+      <div class="container">
+        <h3 align="center">Profile Details</h3>
+              <div *ngIf="user"> 
+                  <div>
+                    <label><b>User Id : </b></label> {{user.userId}}
+                  </div>
+                  <div>
+                    <label><b>User Name :</b> </label> {{user.userName}}
+                  </div>
+                  <div>
+                    <label><b>Password :</b> </label> {{user.password}}
+                  </div>
+                  <div>
+                    <label><b>Email :</b> </label> {{user.email}}
+                  </div>
+                 
+                  <div>
+                      <label><b>Mobile Number :</b> </label> {{user.mobileNumber}}
+                    </div>
+                     
+                </div>
+                <button (click)='detail(user.userId)' class="btn btn-primary">Edit</button>
+      <div [ngStyle]="{'visibility':Edit ? 'visible' : 'hidden'}"> 
+      <form (ngSubmit)="edituser()">
+        <div class="form-group">
+            <label for="userName">UserName</label>
+            <input type="text" class="form-control" id="userName" placeholder="Edit your name" required [(ngModel)]="user.userName" name="userName">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" class="form-control" id="password" placeholder="Edit your password" required [(ngModel)]="user.password" name="password">
+          </div>
+        <div class="form-group">
+            <label for="mobileNumber">Mobile No </label>
+            <input type="text" class="form-control" id="mobileNumber" placeholder="Edit your mobile no" required [(ngModel)]="user.mobileNumber" name="mobileNumber">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Edit your mail id" required [(ngModel)]="user.email" name="email">
+          </div>
+          
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      </div>
+    </div>
+  

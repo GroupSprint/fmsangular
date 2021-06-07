@@ -1,0 +1,42 @@
+<div class="container">
+    <form (ngSubmit)="savepassenger()">
+
+      <div class="form-group">
+        <label for="psgrname">Passenger Name</label>
+        <input type="text" class="form-control" id="psgrname" required [(ngModel)]=" passenger.passengerName" name="psgrname">
+      </div>
+  
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" required [(ngModel)]=" passenger.age" name="age">
+      </div>
+
+      <div class="form-group">
+        <label for="psgruin">Passenger UIN</label>
+        <input type="number" class="form-control" id="psgruin" required [(ngModel)]=" passenger.passengerUIN" name="psgruin">
+      </div>
+      <div class="form-group">
+        <label for="luggage">Luggage</label>
+        <input type="number" class="form-control" id="luggage" required [(ngModel)]=" passenger.luggage" name="luggage">
+      </div>
+      <button type="submit" class="btn btn-success">Add Passenger</button>
+    </form>
+  </div>
+  <br/>
+  <!-- <div id="result"></div>
+
+  <script>
+  // Check browser support
+  // if (typeof(Storage) !== "undefined") {
+    // Store
+    // sessionStorage.setItem("lastname", "Smith");
+    // Retrieve
+    // document.getElementById("result").innerHTML = sessionStorage.getItem("lastname");
+  // } else {
+    // document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  // }
+  </script> -->
+
+  
+  
+

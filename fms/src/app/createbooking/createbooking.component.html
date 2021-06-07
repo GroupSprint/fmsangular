@@ -1,0 +1,113 @@
+<body>
+  <h2 align="center">Add Passenger Details</h2> 
+    <div class="container">
+        <form (ngSubmit)="createbooking()" [formGroup]="addForm" >
+          <div class="row">
+            <label for="npsgr">No of Passenger</label>
+    <select formControlName="noOfPassangers" class="form-control" name="npsgr"  id="npsgr" required (change)="onchange()" >
+      <!-- <option *ngFor="let pow of powers" [value]="pow" >{{pow}}</option> -->
+    <option value="1" selected>1</option>
+    <option value="2">2</option>
+    </select>
+          </div>
+          <div class="row">
+            <div class="col-md">
+              <label><b>Sr.No.</b></label>
+            </div> 
+            <div class="col-md">
+              <label for="psgrname"><b>Passenger Name</b></label>
+            </div> 
+            <div class="col-md">
+              <label for="age"><b>Age</b></label>
+            </div> 
+            <div class="col-md">
+              <label for="psgruin"><b>Passenger UIN</b></label>
+            </div> 
+            <div class="col-md">
+              <label for="luggage"><b>Luggage</b></label>
+            </div> 
+          </div>
+
+          <div class="row">
+            <div class="col-md">
+              <label>Passenger 1</label>
+            </div> 
+            <div class="col-md">
+              <input type="text" class="form-control" id="psgrname" formControlName="passengerName" name="psgrname">
+            </div> 
+            <div class="col-md">
+              <input type="number" min="18" class="form-control" id="age" formControlName="age" name="age">
+            </div> 
+            <div class="col-md">
+              <input type="number" class="form-control" id="psgruin" formControlName="passengerUIN"name="psgruin">
+            </div> 
+            <div class="col-md">
+              <input type="number" min="1" max="5" class="form-control" id="luggage" formControlName="luggage" name="luggage">
+            </div> 
+          </div>
+
+            <!-- <p>Passenger 1</p>
+            <div class="input-grp">
+                  <label for="psgrname">Passenger Name</label> --> 
+                <!-- <input type="text" class="form-control" id="psgrname" formControlName="passengerName" name="psgrname"> -->
+              <!-- </div> --> 
+          
+              <!-- <div class="input-grp">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" formControlName="age" name="age">
+              </div> -->
+              <div class="row" *ngIf="addForm.value.noOfPassangers==2">
+                <div class="col-md">
+                  <label>Passenger 2</label>
+                </div> 
+                <div class="col-md">
+                  <input type="text" class="form-control" placeholder="Optional" id="psgrname2" formControlName="passengerName2" name="psgrname">
+                </div> 
+                <div class="col-md">
+                  <input type="number" min="18" class="form-control"  id="age2" formControlName="age2" name="age">
+                </div> 
+                <div class="col-md">
+                  <input type="number" class="form-control" id="psgruin2"  formControlName="passengerUIN2"name="psgruin">
+                </div> 
+                <div class="col-md">
+                  <input type="number" min="1" max="5" class="form-control" id="luggage2" formControlName="luggage2" name="luggage">
+                </div> 
+              </div>
+        
+              <!-- <div class="input-grp">
+                <label for="psgruin">Passenger UIN</label>
+                <input type="number" class="form-control" id="psgruin" formControlName="passengerUIN"name="psgruin">
+              </div>
+              <div class="input-grp">
+                <label for="luggage">Luggage</label>
+                <input type="number" class="form-control" id="luggage" formControlName="luggage" name="luggage">
+              </div>
+              <p>Passenger 2</p>
+              <div class="input-grp">
+                <label for="psgrname">Passenger Name</label>
+                <input type="text" class="form-control" id="psgrname" formControlName="passengerName" name="psgrname">
+              </div>
+          
+              <div class="input-grp">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" formControlName="age" name="age">
+              </div>
+        
+              <div class="input-grp">
+                <label for="psgruin">Passenger UIN</label>
+                <input type="number" class="form-control" id="psgruin" formControlName="passengerUIN"name="psgruin">
+              </div>
+              <div class="input-grp">
+                <label for="luggage">Luggage</label>
+                <input type="number" class="form-control" id="luggage" formControlName="luggage" name="luggage">
+              </div> -->
+              <div>
+                <input type="checkbox"><label>I accept the policy for reservations.</label>   
+              </div>
+            <div class="input-grp">
+                <button type="submit" class="btn btn-success">Add Booking</button>       
+            </div>
+          </form>
+    </div>
+</body>
+

@@ -1,0 +1,57 @@
+<nav></nav>
+<head>
+  <style>
+    body{
+      background-color: powderblue;
+      background-size: cover;
+      height: 657px;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-header">
+          <a class="navbar-brand" routerLink="/adminhome">Home</a>
+      </div>
+  </nav>
+  </div>
+
+  <div class="container">
+<h2 align='center'>List of Bookings</h2>
+<table class="table" align='center'border='1'>
+    <tr>
+      <th>Booking Id</th>
+      <th>User Name</th>
+      <th>Booking Date</th>
+      <th>Ticket Cost</th>
+      <th>Flight Carrier Name</th>
+      <th>Flight Id</th>
+      <th>Number of Passengers</th>
+  </tr>
+    <tr *ngFor="let book of bookings">
+      <td>{{ book.bookingId }} </td>
+      <td>{{ book.userId.userName }}</td>
+      <td>{{ book.bookingDate }}</td>
+      <td>{{book.ticketCost}}</td>
+      <td>{{book.flight.carrierName}}</td>
+      <td>{{book.flight.flightId  }}</td>
+      <td>{{book.noOfPassangers}}</td>
+    </tr>
+  </table>
+

@@ -1,0 +1,43 @@
+#bg {
+  position: fixed; 
+  top: 6%; 
+  left: 0; 
+    
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 32%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  list-style-type: none;
+  margin-left: -6%;
+  margin-right: -6%;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 21px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  border: 1;
+}

@@ -1,0 +1,57 @@
+<head>
+  <style>
+    body{
+      background-color: powderblue;
+      background-size: cover;
+      height: 657px;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid gray;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-inverse navbar-static-top" style="background-color: gray;">
+      <div class="navbar-header">
+          <a class="navbar-brand" routerLink="/adminhome">Home</a>
+          <a class="navbar-brand" routerLink="/createscheduleflight">Add ScheduleFlight</a>
+      </div>
+  </nav>
+  </div>
+  <div class="container">
+<h2 align='center'>Schedule Flights Available!</h2>  
+<table class="table table-striped table-dark">
+  <tr>
+    <th>Schedule Flight Id</th>
+    <th>Available Seats</th>
+   <th>Fares</th>
+    <th>Schedule Flight Carrier</th>
+    <th>Date of Deaprture</th>
+    <th>Source Airport</th>
+    <th>Destination Airport</th>
+  </tr>
+    <tr *ngFor="let schf of scheduleflight">
+    <td>{{ schf.scheduleFlightId }} </td>
+     <td>{{ schf.availableSeats }}</td>
+      <td>{{ schf.fares }}</td>
+     <td>{{schf.flight.carrierName}}</td>
+      <td>{{ schf.schedule.departureTime  }}</td>
+      <td>{{ schf.schedule.sourceAirport.airportLocation}}</td>
+      <td>{{ schf.schedule.destinationAirport.airportLocation}}</td>
+    </tr>
+  </table>  
+</div>

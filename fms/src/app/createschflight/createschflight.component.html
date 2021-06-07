@@ -1,0 +1,65 @@
+<head>
+    <style>
+        body {
+            background-color: powderblue;
+            background-size: cover;
+            height: 657px;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" routerLink="/adminhome">Home</a>
+                <a class="navbar-brand" routerLink="/Scheduleflightdetails">ScheduleFlight Details</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="col-md-offset-2 col-md-7">
+            <h2 class="text-center">Add New Schedule Flight</h2>
+            <br>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Schedule Flight</div>
+                </div>
+                <div class="panel-body">
+
+                    <form [formGroup]="addForm" (ngSubmit)="createscheduleflight()">
+
+                        <div class="form-group">
+                            <label for="schdate">Date of Departure</label>
+                            <input type='date' formControlName="schdate" name="schdate" class="form-control"
+                                id="schdate" />
+                        </div>
+                        <div class="form-group">
+                            <label for="flightId">Flight ID</label>
+                            <input type='number' formControlName="flightId" name="flightId" class="form-control"
+                                id="flightId" />
+                        </div>
+                        <div class="form-group">
+                            <label for="scheduleId">Schedule ID:</label>
+                            <input type='number' formControlName="scheduleId" name="scheduleId" class="form-control"
+                                id="scheduleId" />
+                        </div>
+                        <div class="form-group">
+                            <label for="fares">Fare</label>
+                            <input type='number' formControlName="fares" name="fares" class="form-control" id="fares" />
+                        </div>
+                        <div class="form-group">
+                            <label for="availableSeats">Seats Available</label>
+                            <input type='number' formControlName="availableSeats" name="availableSeats"
+                                class="form-control" id="availableSeats" />
+                        </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

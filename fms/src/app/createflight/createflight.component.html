@@ -1,0 +1,61 @@
+<head>
+    <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+          background-color: powderblue;
+          background-size: cover;
+          height: 657px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div>
+            <nav class="navbar navbar-inverse navbar-static-top">
+              <div class="navbar-header">
+                  <a class="navbar-brand" routerLink="/adminhome">Home</a>
+                  <a class="navbar-brand" routerLink="/flightdetails">Flight Details</a>
+              </div>
+          </nav>
+      </div>
+        <div class="container">
+            <div class="col-md-offset-2 col-md-7">
+                <h2 class="text-center">Adding New Flight</h2>
+                <br>
+    
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                      <div class="panel-title">Add Flight</div>
+                    </div>
+                    <div class="panel-body">
+    
+    <form [formGroup]="addForm" (ngSubmit)="createflight()">
+        <div class="form-group">
+            <label for="carrierName">Carrier Company</label>
+            <input type="text" formControlName="carrierName" class="form-control" id="carrierName" required [(ngModel)]="flight.carrierName" name="carrierName">
+            <div *ngIf=" Submitted && addForm.controls.carrierName.errors">Give Flight Name</div>
+        </div>
+        <div class="form-group">
+            <label for="flightModel">Flight Model</label>
+            <input type="text" formControlName="flightModel" class="form-control" id="flightModel" required [(ngModel)]="flight.flightModel" name="flightModel">
+            <div *ngIf=" Submitted && addForm.controls.flightModel.errors">Give Flight Model</div>
+        </div>
+        <div class="form-group">
+            <label for="seatCapacity">Seat Capacity</label>
+            <input type="text" formControlName="seatCapacity" class="form-control" id="seatCapacity" required [(ngModel)]="flight.seatCapacity" name="seatCapacity">
+            <div *ngIf=" Submitted && addForm.controls.seatCapacity.errors">Seat capacity Required</div>
+        </div><br>
+        <button type="submit" class="btn btn-primary">Add Flight</button>
+      </form>
+      </div>
+      </div>
+    </div>
+    </div>
+    </body>

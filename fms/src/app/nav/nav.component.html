@@ -1,0 +1,17 @@
+<nav align='center'>
+  
+    <a routerLink="/flightdetails" *ngIf="this.isLoggedUser">Flights</a> |
+    <a routerLink="/airportdetails" *ngIf="this.isLoggedUser">Airports</a> |
+    <a routerLink="/userhome" *ngIf="this.isLoggedUser">UserHome</a> |
+
+
+    <a routerLink="/addflightdetails" *ngIf="this.isLoggedAdmin">Add Flights</a> |
+    <a routerLink="/Userdetails" *ngIf="this.isLoggedAdmin">Users</a> |
+    <a routerLink="/Scheduledetails" *ngIf="this.isLoggedAdmin">Schedule Details</a> |
+    <a routerLink="/airportdetails" *ngIf="this.isLoggedAdmin">Airports</a> |
+    <a routerLink="/flightdetails" *ngIf="this.isLoggedAdmin">Flights</a> |
+    <a routerLink="/Scheduleflightdetails" *ngIf="this.isLoggedAdmin">View ScheduleFlights</a> |
+    <a routerLink="/passenger" *ngIf="this.isLoggedAdmin">View Passenger Details</a>  |
+    <a routerLink="/booking-details" *ngIf="this.isLoggedAdmin">View All Booking</a>
+    
+    </nav>

@@ -1,0 +1,51 @@
+<head>
+<style>
+    body {
+        background-color: powderblue;
+        background-size: cover;
+        height: 657px;
+    }
+</style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="navbar-header">
+              <a class="navbar-brand" routerLink="/adminhome">Home</a>
+              <a class="navbar-brand" routerLink="/airportdetails">Airport Details</a>
+          </div>
+      </nav>
+  </div>
+
+    <div class="container">
+        <div class="col-md-offset-2 col-md-7">
+            <h2 class="text-center">Adding New Airport</h2>
+            <br>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Add Airport</div>
+                </div>
+                <div class="panel-body">
+
+                    <form [formGroup]="addForm" (ngSubmit)="createAirport()">
+                        <div class="form-group">
+                            <label for="airportName">Airport Name</label>
+                            <input formControlName="airportName" type="text" class="form-control" id="airportName" required
+                                [(ngModel)]="airport.airportName" name="airportName">
+                                <div *ngIf=" Submitted && addForm.controls.airportName.errors">Give Airport Name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="airportLocation">Airport Location</label>
+                            <input formControlName="airportLocation" type="text" class="form-control" id="airportLocation" required
+                                [(ngModel)]="airport.airportLocation" name="airportLocation">
+                                <div *ngIf=" Submitted && addForm.controls.airportLocation.errors">Give Airport Location</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Airport</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

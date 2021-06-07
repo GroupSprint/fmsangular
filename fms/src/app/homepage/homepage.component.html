@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flight Management System</title>
+    <style>
+        body {
+            background-image: url('https://singularityhub.com/wp-content/uploads/2018/12/airplane-flying-above-clouds_shutterstock_553131187-1068x601.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Flight Management</a>
+                <a class="navbar-brand" routerLink="/">Home</a>
+                <a class="navbar-brand" routerLink="">Services</a>
+                <a class="navbar-brand" routerLink="/">About US</a>
+                <a class="navbar-brand" routerLink="/">Contact US</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a routerLink="/adduser"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a routerLink="/Login"><span class="glyphicon glyphicon-log-in"></span> Login &nbsp;&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- <div style="background-image: url('background.jpg');"> -->
+    <div class="jumbotron">
+        <div class="booking-form-box">
+            <form (ngSubmit)="getScheduledFlightByAirport()" [formGroup]="addForm">
+                <div class="booking-form">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Flying From</label>
+                            <select class="form-control" formControlName="source" id="power1" required
+                                [(ngModel)]="scheduledFlight.source">
+                                <option *ngFor="let pow of city" [value]="pow">{{pow}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Flying To</label>
+                            <select class="form-control" formControlName="destination" id="power2" required
+                                [(ngModel)]="scheduledFlight.destination">
+                                <option *ngFor="let pow of city" [value]="pow">{{pow}}</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="input-grp">
+                                <label>Departing</label>
+                                <input type="date" min={{minDate}} formControlName="schdate"
+                                    [(ngModel)]="scheduledFlight.schdate" class="form-control select-date">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" align="center">
+                        <div class="col-md-3">
+                            <div class="form-btn">
+                                <button class="submit-btn">Show Flights</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div *ngIf="scheduledFlight.schdate">
+            <h2>Schedule Details</h2>
+            <table class="table">
+                <tr>
+                    <th>Flight Id:</th>
+                    <th>Carrier Name</th>
+                    <th>Flight Model:</th>
+                    <th>Departure Time:</th>
+                    <th>Arrival Time:</th>
+                </tr>
+                <tr *ngFor="let sch of schFlights">
+                    <td>{{sch.flight.flightId}}</td>
+                    <td>{{sch.flight.carrierName}}</td>
+                    <td>{{sch.flight.flightModel}}</td>
+                    <td>{{sch.schedule.departureTime | date:'d/M/yy, h:mm a'}}</td>
+                    <td>{{sch.schedule.airrivalTime | date:'d/M/yy, h:mm a'}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- <div style="background-color: white;">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+                <h3>About Us</h3>
+                <p align=justify>Are you ready to boilerstrap your cross-compatible buzzword? Check, flat and semantic,
+                    so what are you waiting for?</p>
+            </div>
+            <div class="col-md-4">
+                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                <h3>Contact US</h3>
+                <p align=justify>Are you ready to boilerstrap your cross-compatible buzzword? Check, flat and semantic,
+                    so what are you waiting for?</p>
+            </div>
+            <div class="col-md-4">
+                <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+                <h3>Follow Us</h3>
+                <p align=justify>Are you ready to boilerstrap your cross-compatible buzzword? Check, flat and semantic,
+                    so what are you waiting for?</p>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <!-- <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> -->
+                    <h3>Quick Contact</h3>
+                    <h5>Phone:</h5>
+                    <p>+255 255 54 53 52 </p>
+                    <h5>Email:</h5>
+                    <p>support@email.com </p>
+                </div>
+
+                <div class="col-md-4">
+                    <!-- <span class="glyphicon glyphicon-console" aria-hidden="true"></span> -->
+                    <h3> Social Links</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; Copyright 2021 Flight Management System. All Rights Reserved
+        </div>
+    </div>
+
+    <!-- </div> -->
+</body>
+
+</html>

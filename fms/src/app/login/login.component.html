@@ -1,0 +1,64 @@
+<body>
+    <div *ngIf="errors" class="alert alert-danger" role="alert" style="text-align: center;">
+        <strong>An Error Occurred :-</strong>
+        {{errors}} !!!!
+    </div>
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>User Login</h3>
+                <form [formGroup]="addForm" (ngSubmit)="login()">
+
+                    <div class="form-group">
+                        <label for="userName"></label>
+                        <input type='text' formControlName="userName" placeholder="Enter Username *" name="userName"
+                            class="form-control" id="userName" />
+                        <!-- <small *ngIf=" Submitted && addForm.controls.userName.errors?.required">Give User Name</small>
+                        <small *ngIf=" Submitted && addForm.controls.userName.errors?.minLength">Name Length more than 2
+                            chars</small> -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"></label>
+                        <input type='password' formControlName="password" placeholder="Enter Password *" name="password"
+                            class="form-control" id="password" />
+                        <!-- <small *ngIf=" Submitted && addForm.controls.password.errors?.required">Provide password</small>
+                        <small *ngIf=" Submitted && addForm.controls.password.errors?.minLength">Password lenght more
+                            than 6</small> -->
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" />
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-6 login-form-2">
+                <h3>Administrator Login</h3>
+                <form (ngSubmit)="Adminlogin()" [formGroup]="addForm">
+                    <div class="form-group">
+                        <label for="AdminName"></label>
+                        <input type='text' formControlName="AdminName" placeholder="Enter Username *" name="AdminName"
+                            class="form-control" id="AdminName" />
+                        <!-- <small *ngIf=" Submitted && addForm.controls.AdminName.errors?.required">Give Admin Name</small>
+                        <small *ngIf=" Submitted && addForm.controls.AdminName.errors?.minLength">Name Length more than
+                            2 chars</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="Adminpassword"></label>
+                        <input type='password' formControlName="Adminpassword" placeholder="Enter Password *"
+                            name="Adminpassword" class="form-control" id="Adminpassword" />
+                        <!-- <small *ngIf=" Submitted && addForm.controls.Adminpassword.errors?.required">Provide
+                            password</small>
+                        <small *ngIf=" Submitted && addForm.controls.Adminpassword.errors?.minLength">Password lenght
+                            more than 6</small> -->
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
