@@ -1,0 +1,270 @@
+2021-05-10 20:20:09,054 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 1.8.0_211 on UPLC with PID 51932 (C:\Users\user\Desktop\Capgemini STS\FlightManagement2\target\classes started by user in C:\Users\user\Desktop\Capgemini STS\FlightManagement2)
+2021-05-10 20:20:09,050 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-10 20:20:09,082 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-10 20:20:09,455 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\user\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/user/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-10 20:20:09,458 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-10 20:20:09,461 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-10 20:20:15,213 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 20:20:15,938 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 685 ms. Found 7 JPA repository interfaces.
+2021-05-10 20:20:23,213 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-10 20:20:23,330 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:20:23,339 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-10 20:20:23,345 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 20:20:23,913 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-10 20:20:23,915 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 14444 ms
+2021-05-10 20:20:25,274 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 20:20:25,922 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-10 20:20:27,698 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-10 20:20:28,416 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-10 20:20:28,420 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-10 20:20:34,035 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-10 20:20:34,175 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-10 20:20:43,861 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 20:20:43,945 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:20:44,123 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-10 20:20:48,690 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 20:20:49,383 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-10 20:20:49,813 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:20:50,660 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:20:50,762 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-10 20:20:50,767 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-10 20:20:50,910 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-10 20:20:51,102 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-10 20:20:52,324 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 45.687 seconds (JVM running for 50.709)
+2021-05-10 20:21:05,921 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-10 20:21:05,922 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-10 20:21:05,927 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 4 ms
+2021-05-10 20:22:48,205 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-1] List<Airport> viewAirportList()
+2021-05-10 20:24:06,557 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-4] Booking viewBooking()
+2021-05-10 20:24:42,671 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-9] Set<Flight> viewAllFligts()
+2021-05-10 20:24:53,109 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-10] Set<Flight> viewAllFligts()
+2021-05-10 20:25:02,151 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-3] Flight viewFlight()
+2021-05-10 20:25:06,965 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-2] Flight viewFlight()
+2021-05-10 20:25:07,011 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-2] Resolved [com.cg.flightmgmt.exception.FlightNotFoundException: Flight not found]
+2021-05-10 20:25:20,656 INFO com.cg.flightmgmt.service.PassengerService [http-nio-8082-exec-1] List<Passenger> getAllPassengers()
+2021-05-10 20:25:39,704 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-8] List<Schedule> getAllSchedule()
+2021-05-10 20:25:55,326 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-7] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-10 20:25:57,279 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-9] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-10 20:27:25,292 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] User validateUser()
+2021-05-10 20:27:36,228 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-6] User validateUser()
+2021-05-10 20:27:36,239 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-6] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-05-10 20:29:18,687 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-10] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:29:18,704 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-10] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:29:18,724 INFO com.zaxxer.hikari.HikariDataSource [Thread-10] HikariPool-1 - Shutdown initiated...
+2021-05-10 20:29:18,856 INFO com.zaxxer.hikari.HikariDataSource [Thread-10] HikariPool-1 - Shutdown completed.
+2021-05-10 20:29:19,694 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 1.8.0_211 on UPLC with PID 51932 (C:\Users\user\Desktop\Capgemini STS\FlightManagement2\target\classes started by user in C:\Users\user\Desktop\Capgemini STS\FlightManagement2)
+2021-05-10 20:29:19,696 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-10 20:29:21,432 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 20:29:21,591 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 157 ms. Found 7 JPA repository interfaces.
+2021-05-10 20:29:22,107 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-10 20:29:22,109 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:29:22,110 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-10 20:29:22,111 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 20:29:22,248 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-10 20:29:22,249 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2541 ms
+2021-05-10 20:29:22,455 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 20:29:22,477 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-05-10 20:29:22,479 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-10 20:29:22,540 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-05-10 20:29:22,542 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-10 20:29:23,475 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 20:29:23,478 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:29:23,515 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-10 20:29:24,469 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 20:29:24,614 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-10 20:29:24,737 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:29:24,950 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:29:24,961 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-10 20:29:24,964 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-10 20:29:24,969 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-10 20:29:24,983 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-10 20:29:25,300 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 5.788 seconds (JVM running for 563.686)
+2021-05-10 20:29:25,307 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-10 20:29:44,621 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-26] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:29:44,627 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-26] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:29:44,630 INFO com.zaxxer.hikari.HikariDataSource [Thread-26] HikariPool-2 - Shutdown initiated...
+2021-05-10 20:29:44,647 INFO com.zaxxer.hikari.HikariDataSource [Thread-26] HikariPool-2 - Shutdown completed.
+2021-05-10 20:29:45,384 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 1.8.0_211 on UPLC with PID 51932 (C:\Users\user\Desktop\Capgemini STS\FlightManagement2\target\classes started by user in C:\Users\user\Desktop\Capgemini STS\FlightManagement2)
+2021-05-10 20:29:45,386 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-10 20:29:46,837 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 20:29:46,967 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 128 ms. Found 7 JPA repository interfaces.
+2021-05-10 20:29:47,314 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-10 20:29:47,316 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:29:47,317 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-10 20:29:47,318 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 20:29:47,368 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-10 20:29:47,369 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1966 ms
+2021-05-10 20:29:47,519 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 20:29:47,535 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2021-05-10 20:29:47,536 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-10 20:29:47,582 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2021-05-10 20:29:47,585 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-10 20:29:48,246 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 20:29:48,251 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:29:48,315 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-10 20:29:49,446 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 20:29:49,630 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-10 20:29:49,789 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:29:50,003 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:29:50,019 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-10 20:29:50,023 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-10 20:29:50,027 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-10 20:29:50,047 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-10 20:29:50,327 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 5.134 seconds (JVM running for 588.712)
+2021-05-10 20:29:50,332 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-10 20:31:48,412 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-33] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:31:48,421 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-33] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:31:48,427 INFO com.zaxxer.hikari.HikariDataSource [Thread-33] HikariPool-3 - Shutdown initiated...
+2021-05-10 20:31:48,449 INFO com.zaxxer.hikari.HikariDataSource [Thread-33] HikariPool-3 - Shutdown completed.
+2021-05-10 20:31:49,344 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 1.8.0_211 on UPLC with PID 51932 (C:\Users\user\Desktop\Capgemini STS\FlightManagement2\target\classes started by user in C:\Users\user\Desktop\Capgemini STS\FlightManagement2)
+2021-05-10 20:31:49,346 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-10 20:31:51,452 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 20:31:51,660 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 206 ms. Found 7 JPA repository interfaces.
+2021-05-10 20:31:52,418 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-10 20:31:52,420 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:31:52,421 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-10 20:31:52,421 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 20:31:52,469 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-10 20:31:52,469 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3107 ms
+2021-05-10 20:31:52,620 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 20:31:52,634 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2021-05-10 20:31:52,635 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-10 20:31:52,675 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2021-05-10 20:31:52,677 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-10 20:31:53,175 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 20:31:53,177 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:31:53,216 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-10 20:31:54,043 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 20:31:54,189 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-10 20:31:54,304 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:31:54,499 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:31:54,510 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-10 20:31:54,512 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-10 20:31:54,516 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-10 20:31:54,531 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-10 20:31:54,761 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 5.64 seconds (JVM running for 713.146)
+2021-05-10 20:31:54,768 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-10 20:31:56,402 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-39] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:31:56,409 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-39] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:31:56,412 INFO com.zaxxer.hikari.HikariDataSource [Thread-39] HikariPool-4 - Shutdown initiated...
+2021-05-10 20:31:56,451 INFO com.zaxxer.hikari.HikariDataSource [Thread-39] HikariPool-4 - Shutdown completed.
+2021-05-10 20:31:57,092 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 1.8.0_211 on UPLC with PID 51932 (C:\Users\user\Desktop\Capgemini STS\FlightManagement2\target\classes started by user in C:\Users\user\Desktop\Capgemini STS\FlightManagement2)
+2021-05-10 20:31:57,093 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-10 20:31:58,332 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 20:31:58,446 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 112 ms. Found 7 JPA repository interfaces.
+2021-05-10 20:31:58,775 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-10 20:31:58,777 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:31:58,778 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-10 20:31:58,779 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 20:31:58,839 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-10 20:31:58,839 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1738 ms
+2021-05-10 20:31:58,991 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 20:31:59,011 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2021-05-10 20:31:59,013 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-10 20:31:59,063 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2021-05-10 20:31:59,065 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-10 20:31:59,759 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 20:31:59,761 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:31:59,812 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-10 20:32:00,727 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 20:32:00,850 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-10 20:32:00,968 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:32:01,181 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:32:01,191 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-10 20:32:01,193 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-10 20:32:01,197 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-10 20:32:01,217 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-10 20:32:01,427 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 4.464 seconds (JVM running for 719.813)
+2021-05-10 20:32:01,432 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-10 20:32:03,398 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(4)-127.0.0.1] Application shutdown requested.
+2021-05-10 20:32:03,826 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(4)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:32:03,832 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(4)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:32:03,836 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(4)-127.0.0.1] HikariPool-5 - Shutdown initiated...
+2021-05-10 20:32:03,856 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(4)-127.0.0.1] HikariPool-5 - Shutdown completed.
+2021-05-10 20:35:13,260 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 1.8.0_211 on UPLC with PID 52216 (C:\Users\user\Desktop\Capgemini STS\FlightManagement2\target\classes started by user in C:\Users\user\Desktop\Capgemini STS\FlightManagement2)
+2021-05-10 20:35:13,274 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-10 20:35:13,299 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-10 20:35:13,513 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\user\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/user/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-10 20:35:13,515 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-10 20:35:13,517 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-10 20:35:17,383 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 20:35:17,700 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 270 ms. Found 7 JPA repository interfaces.
+2021-05-10 20:35:19,369 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-10 20:35:19,393 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:35:19,396 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-10 20:35:19,397 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 20:35:19,788 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-10 20:35:19,789 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 6267 ms
+2021-05-10 20:35:20,473 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 20:35:20,611 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-10 20:35:20,942 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-10 20:35:21,222 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-10 20:35:21,226 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-10 20:35:22,465 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-10 20:35:22,499 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-10 20:35:25,605 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 20:35:25,634 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:35:25,739 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-10 20:35:28,528 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 20:35:28,972 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-10 20:35:29,294 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:35:29,841 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:35:29,884 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-10 20:35:29,888 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-10 20:35:29,942 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-10 20:35:30,067 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-10 20:35:30,845 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 19.72 seconds (JVM running for 22.799)
+2021-05-10 20:35:46,999 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-10 20:35:47,001 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-10 20:35:47,007 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 5 ms
+2021-05-10 20:35:58,531 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-2] List<Booking> getAllBookings()
+2021-05-10 20:37:00,601 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-10] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:37:00,615 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-10] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:37:00,630 INFO com.zaxxer.hikari.HikariDataSource [Thread-10] HikariPool-1 - Shutdown initiated...
+2021-05-10 20:37:00,652 INFO com.zaxxer.hikari.HikariDataSource [Thread-10] HikariPool-1 - Shutdown completed.
+2021-05-10 20:37:01,565 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 1.8.0_211 on UPLC with PID 52216 (C:\Users\user\Desktop\Capgemini STS\FlightManagement2\target\classes started by user in C:\Users\user\Desktop\Capgemini STS\FlightManagement2)
+2021-05-10 20:37:01,566 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-10 20:37:03,122 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 20:37:03,287 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 163 ms. Found 7 JPA repository interfaces.
+2021-05-10 20:37:03,946 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-10 20:37:03,948 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:37:03,950 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-10 20:37:03,951 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 20:37:04,050 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-10 20:37:04,051 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2474 ms
+2021-05-10 20:37:04,269 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 20:37:04,291 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-05-10 20:37:04,294 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-10 20:37:04,357 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-05-10 20:37:04,359 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-10 20:37:05,177 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 20:37:05,180 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:37:05,218 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-10 20:37:06,148 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 20:37:06,309 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-10 20:37:06,450 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:37:06,704 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-10 20:37:06,717 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-10 20:37:06,721 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-10 20:37:06,724 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-10 20:37:06,739 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-10 20:37:07,009 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 5.709 seconds (JVM running for 118.963)
+2021-05-10 20:37:07,017 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-10 20:37:27,671 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-10 20:37:27,673 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-10 20:37:27,677 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 3 ms
+2021-05-10 20:37:27,700 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-1] List<Booking> getAllBookings()
+2021-05-10 20:37:43,360 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-2] Booking cancelBooking()
+2021-05-10 20:37:56,428 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-5] List<Booking> getAllBookings()
+2021-05-10 20:37:56,457 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-5] Resolved [com.cg.flightmgmt.exception.BookingNotFoundException: Booking Not Found]
+2021-05-10 20:38:32,603 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-6] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-10 20:39:09,853 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-9] Set<Flight> viewAllFligts()
+2021-05-10 20:40:41,234 INFO com.cg.flightmgmt.service.PassengerService [http-nio-8082-exec-1] List<Passenger> getAllPassengers()
+2021-05-10 20:41:48,787 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-2] Booking addBooking()
+2021-05-10 20:42:16,734 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-5] List<Booking> getAllBookings()
+2021-05-10 20:42:40,517 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-6] Booking viewBooking()
+2021-05-10 20:44:20,462 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(6)-127.0.0.1] Application shutdown requested.
+2021-05-10 20:44:21,050 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(6)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-10 20:44:21,060 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(6)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 20:44:21,065 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(6)-127.0.0.1] HikariPool-2 - Shutdown initiated...
+2021-05-10 20:44:21,097 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(6)-127.0.0.1] HikariPool-2 - Shutdown completed.

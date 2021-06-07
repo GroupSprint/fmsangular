@@ -1,0 +1,149 @@
+2021-06-06 11:07:05,178 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on GNANI with PID 9984 (C:\Users\Gnanesh\eclipse-workspace\Flight-Management-Application\target\classes started by Gnanesh in C:\Users\Gnanesh\eclipse-workspace\Flight-Management-Application)
+2021-06-06 11:07:05,176 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-06-06 11:07:05,181 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-06-06 11:07:05,221 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Gnanesh\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Gnanesh/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-06-06 11:07:05,222 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-06 11:07:05,222 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-06 11:07:06,033 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-06 11:07:06,121 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 78 ms. Found 7 JPA repository interfaces.
+2021-06-06 11:07:06,709 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-06-06 11:07:06,719 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-06-06 11:07:06,720 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-06-06 11:07:06,720 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-06-06 11:07:06,795 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-06-06 11:07:06,795 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1573 ms
+2021-06-06 11:07:06,968 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-06 11:07:07,044 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-06-06 11:07:07,181 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-06 11:07:07,272 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-06-06 11:07:07,274 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-06-06 11:07:08,267 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-06-06 11:07:08,286 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-06-06 11:07:12,214 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-06 11:07:12,280 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-06 11:07:12,306 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-06-06 11:07:13,175 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-06 11:07:13,357 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-06 11:07:13,442 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-06 11:07:13,596 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-06-06 11:07:13,613 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-06-06 11:07:13,614 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-06-06 11:07:13,631 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-06-06 11:07:13,648 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-06-06 11:07:13,917 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 9.14 seconds (JVM running for 10.01)
+2021-06-06 11:08:03,389 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-06 11:08:03,390 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-06-06 11:08:03,391 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2021-06-06 11:08:03,430 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-1] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-06-06 11:08:38,294 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-3] ResponseEntity<User> validateUser()
+2021-06-06 11:08:38,298 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] User validateUser()
+2021-06-06 11:08:58,971 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-5] ResponseEntity<User>  viewUserById()
+2021-06-06 11:08:58,975 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-5] User getUserById()
+2021-06-06 11:09:00,217 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-6] ResponseEntity<User>  viewUserById()
+2021-06-06 11:09:00,218 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-6] User getUserById()
+2021-06-06 11:09:26,322 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-10] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-06-06 11:09:33,131 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-1] ResponseEntity<User>  viewUserById()
+2021-06-06 11:09:33,135 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-1] User getUserById()
+2021-06-06 11:09:44,412 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-3] ResponseEntity<User> validateUser()
+2021-06-06 11:09:44,413 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] User validateUser()
+2021-06-06 11:09:50,557 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-5] ResponseEntity<List<User>> viewAllAirport()
+2021-06-06 11:09:50,561 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-5] List<User> getAllUser()
+2021-06-06 11:09:55,575 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-6] ResponseEntity<List<Schedule>> getScheduleList()
+2021-06-06 11:09:55,581 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-6] List<Schedule> getAllSchedule()
+2021-06-06 11:10:23,952 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-8] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-06-06 11:10:23,958 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-8] Set<Flight> viewAllFligts()
+2021-06-06 11:10:29,369 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-10] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-06-06 11:10:29,370 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-10] Set<Flight> viewAllFligts()
+2021-06-06 11:10:41,742 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-2] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-06-06 11:10:41,745 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-2] List<ScheduledFlight> viewAllScheduledFlights()
+2021-06-06 11:10:52,695 INFO com.cg.flightmgmt.controller.PassengerController [http-nio-8082-exec-4] ResponseEntity<List<Passenger>> getAllPassengers()
+2021-06-06 11:10:52,699 INFO com.cg.flightmgmt.service.PassengerService [http-nio-8082-exec-4] List<Passenger> getAllPassengers()
+2021-06-06 11:10:55,370 INFO com.cg.flightmgmt.controller.PassengerController [http-nio-8082-exec-5] ResponseEntity<Passenger> getPassengerByid()
+2021-06-06 11:10:55,372 INFO com.cg.flightmgmt.service.PassengerService [http-nio-8082-exec-5] Passenger viewPassenger()
+2021-06-06 11:10:56,703 INFO com.cg.flightmgmt.controller.PassengerController [http-nio-8082-exec-7] ResponseEntity<Passenger> getPassengerByid()
+2021-06-06 11:10:56,705 INFO com.cg.flightmgmt.service.PassengerService [http-nio-8082-exec-7] Passenger viewPassenger()
+2021-06-06 11:11:09,435 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-9] ResponseEntity<Booking> getAllBookings()
+2021-06-06 11:11:09,440 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-9] List<Booking> getAllBookings()
+2021-06-06 11:11:19,155 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-1] ResponseEntity<User>  viewUserById()
+2021-06-06 11:11:19,158 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-1] User getUserById()
+2021-06-06 11:11:59,220 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-3] ResponseEntity<User> validateUser()
+2021-06-06 11:11:59,222 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] User validateUser()
+2021-06-06 11:12:57,496 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-5] ResponseEntity<User> validateUser()
+2021-06-06 11:12:57,498 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-5] User validateUser()
+2021-06-06 11:12:57,505 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-5] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:13:12,959 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-7] ResponseEntity<User> validateUser()
+2021-06-06 11:13:12,961 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-7] User validateUser()
+2021-06-06 11:13:27,453 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-9] ResponseEntity<User>  viewUserById()
+2021-06-06 11:13:27,455 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-9] User getUserById()
+2021-06-06 11:13:36,364 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-1] ResponseEntity<User> validateUser()
+2021-06-06 11:13:36,365 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-1] User validateUser()
+2021-06-06 11:13:36,368 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-1] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:16:03,850 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-3] ResponseEntity<User> validateUser()
+2021-06-06 11:16:03,852 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] User validateUser()
+2021-06-06 11:16:03,857 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:20:03,253 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-5] ResponseEntity<User> validateUser()
+2021-06-06 11:20:03,256 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-5] User validateUser()
+2021-06-06 11:20:03,261 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-5] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:20:17,142 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-7] ResponseEntity<User> validateUser()
+2021-06-06 11:20:17,145 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-7] User validateUser()
+2021-06-06 11:20:17,150 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-7] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:20:18,465 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-8] ResponseEntity<User> validateUser()
+2021-06-06 11:20:18,467 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-8] User validateUser()
+2021-06-06 11:20:18,471 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-8] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:20:22,349 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-9] ResponseEntity<User> validateUser()
+2021-06-06 11:20:22,351 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-9] User validateUser()
+2021-06-06 11:20:22,355 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-9] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:20:22,722 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-10] ResponseEntity<User> validateUser()
+2021-06-06 11:20:22,722 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-10] User validateUser()
+2021-06-06 11:20:22,725 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-10] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:20:37,719 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-2] ResponseEntity<User> validateUser()
+2021-06-06 11:20:37,720 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-2] User validateUser()
+2021-06-06 11:20:37,724 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-2] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:20:58,087 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-4] ResponseEntity<User> validateUser()
+2021-06-06 11:20:58,089 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-4] User validateUser()
+2021-06-06 11:20:58,093 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-4] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:21:10,565 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-6] ResponseEntity<User> validateUser()
+2021-06-06 11:21:10,566 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-6] User validateUser()
+2021-06-06 11:21:10,569 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-6] Resolved [com.cg.flightmgmt.exception.UserNotFoundException: Password does not match.]
+2021-06-06 11:21:19,584 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-8] ResponseEntity<User> validateUser()
+2021-06-06 11:21:19,586 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-8] User validateUser()
+2021-06-06 11:21:32,756 INFO com.cg.flightmgmt.controller.AirportController [http-nio-8082-exec-10] ResponseEntity<List<Airport>> viewAllAirports()
+2021-06-06 11:21:32,760 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-10] List<Airport> viewAirportList()
+2021-06-06 11:22:10,981 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-2] ResponseEntity<User> validateUser()
+2021-06-06 11:22:10,983 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-2] User validateUser()
+2021-06-06 11:23:38,297 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-4] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-06-06 11:23:39,615 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-5] ResponseEntity<ScheduledFlight> viewScheduledFlightById()
+2021-06-06 11:23:39,618 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-5] ScheduledFlight viewFlightSchedule()
+2021-06-06 14:29:13,427 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-7] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-06-06 14:29:32,309 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-9] ResponseEntity<User> validateUser()
+2021-06-06 14:29:32,311 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-9] User validateUser()
+2021-06-06 14:29:37,713 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-10] ResponseEntity<List<Schedule>> getScheduleList()
+2021-06-06 14:29:37,715 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-10] List<Schedule> getAllSchedule()
+2021-06-06 14:29:40,114 INFO com.cg.flightmgmt.controller.AirportController [http-nio-8082-exec-2] ResponseEntity<List<Airport>> viewAllAirports()
+2021-06-06 14:29:40,116 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-2] List<Airport> viewAirportList()
+2021-06-06 14:29:44,497 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-3] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-06-06 14:29:44,500 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-3] List<ScheduledFlight> viewAllScheduledFlights()
+2021-06-06 14:29:52,835 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-5] ResponseEntity<Booking> getAllBookings()
+2021-06-06 14:29:52,839 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-5] List<Booking> getAllBookings()
+2021-06-06 14:29:59,185 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-7] ResponseEntity<Booking> getAllBookings()
+2021-06-06 14:29:59,187 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-7] List<Booking> getAllBookings()
+2021-06-06 14:30:30,355 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-9] ResponseEntity<Booking> getAllBookings()
+2021-06-06 14:30:30,357 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-9] List<Booking> getAllBookings()
+2021-06-06 14:30:31,137 INFO com.cg.flightmgmt.controller.AirportController [http-nio-8082-exec-10] ResponseEntity<List<Airport>> viewAllAirports()
+2021-06-06 14:30:31,141 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-10] List<Airport> viewAirportList()
+2021-06-06 14:30:31,906 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-1] ResponseEntity<List<Schedule>> getScheduleList()
+2021-06-06 14:30:31,907 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-1] List<Schedule> getAllSchedule()
+2021-06-06 14:30:35,561 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-2] ResponseEntity<List<Schedule>> getScheduleList()
+2021-06-06 14:30:35,567 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-2] List<Schedule> getAllSchedule()
+2021-06-06 14:30:37,972 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-3] ResponseEntity<User>  viewUserById()
+2021-06-06 14:30:37,974 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] User getUserById()
+2021-06-06 15:09:37,015 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-5] ResponseEntity<User> validateUser()
+2021-06-06 15:09:37,018 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-5] User validateUser()
+2021-06-06 15:09:53,344 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-6] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-06-06 15:09:54,880 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-7] ResponseEntity<ScheduledFlight> viewScheduledFlightById()
+2021-06-06 15:09:54,883 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-7] ScheduledFlight viewFlightSchedule()
+2021-06-06 20:23:59,049 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(560)-127.0.0.1] Application shutdown requested.
+2021-06-06 20:23:59,437 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(560)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-06 20:23:59,449 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(560)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-06 20:23:59,492 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(560)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2021-06-06 20:23:59,503 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(560)-127.0.0.1] HikariPool-1 - Shutdown completed.

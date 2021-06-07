@@ -1,0 +1,567 @@
+2021-05-26 08:52:51,532 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11956 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-26 08:52:51,555 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-26 08:52:52,523 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-26 08:52:52,976 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\S\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/S/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-26 08:52:52,978 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-26 08:52:52,979 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-26 08:53:09,322 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-26 08:53:09,669 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 316 ms. Found 7 JPA repository interfaces.
+2021-05-26 08:53:15,982 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-26 08:53:16,291 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-26 08:53:16,292 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-26 08:53:16,294 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-26 08:53:17,426 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-26 08:53:17,428 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 24446 ms
+2021-05-26 08:53:20,981 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-26 08:53:24,311 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-26 08:53:29,923 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-26 08:53:33,413 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-26 08:53:33,740 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-26 09:04:35,873 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:858)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: oracle.net.ns.NetException: Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:284)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:340)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1600)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:591)
+	... 56 common frames omitted
+2021-05-26 09:04:36,946 WARN org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH000342: Could not obtain connection to query metadata
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:858)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: oracle.net.ns.NetException: Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:284)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:340)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1600)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:591)
+	... 56 common frames omitted
+2021-05-26 09:04:39,828 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-26 09:05:03,526 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-26 09:05:03,587 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-26 09:15:40,915 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:858)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: oracle.net.ns.NetException: Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:284)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:340)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1600)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:591)
+	... 54 common frames omitted
+2021-05-26 09:16:10,204 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] SQL Error: 12518, SQLState: 66000
+2021-05-26 09:16:10,911 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+2021-05-26 09:16:58,601 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2021-05-26 09:17:23,569 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2021-05-26 09:17:29,895 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-05-26 09:17:38,279 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-26 09:17:47,965 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 22 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 26 common frames omitted
+Caused by: java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:858)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	... 40 common frames omitted
+Caused by: oracle.net.ns.NetException: Listener refused the connection with the following error:
+ORA-12518, TNS:listener could not hand off client connection
+ 
+	at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:284)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:340)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1600)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:591)
+	... 54 common frames omitted
+2021-05-26 13:24:15,717 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 12156 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-26 13:24:15,877 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-26 13:24:16,087 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\S\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/S/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-26 13:24:16,088 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-26 13:24:16,089 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-26 13:24:16,413 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-26 13:24:19,649 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-26 13:24:19,883 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 215 ms. Found 7 JPA repository interfaces.
+2021-05-26 13:24:27,109 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-26 13:24:27,234 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-26 13:24:27,236 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-26 13:24:27,238 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-26 13:24:27,821 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-26 13:24:27,823 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 11732 ms
+2021-05-26 13:24:29,975 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-26 13:24:30,378 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-26 13:24:31,443 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-26 13:24:32,074 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-26 13:24:32,093 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-26 13:24:33,782 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-26 13:24:34,347 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-26 13:25:01,899 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-26 13:25:01,970 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 13:25:02,111 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-26 13:25:05,467 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-26 13:25:06,179 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-26 13:25:06,650 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-26 13:25:07,272 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-26 13:25:07,388 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-26 13:25:07,391 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-26 13:25:07,477 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-26 13:25:07,575 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-26 13:25:08,680 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 55.502 seconds (JVM running for 58.446)
+2021-05-26 13:26:30,360 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-26 13:26:30,361 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-26 13:26:30,364 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 3 ms
+2021-05-26 13:29:24,370 INFO com.cg.flightmgmt.controller.AirportController [http-nio-8082-exec-10] ResponseEntity<List<Airport>> viewAllAirports()
+2021-05-26 13:29:24,426 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-10] List<Airport> viewAirportList()
+2021-05-26 13:45:12,363 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-6] ResponseEntity<List<Schedule>> getScheduleList()
+2021-05-26 13:45:13,280 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-6] List<Schedule> getAllSchedule()
+2021-05-26 13:45:16,903 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-3] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-05-26 13:45:22,422 WARN com.zaxxer.hikari.pool.PoolBase [http-nio-8082-exec-3] HikariPool-1 - Failed to validate connection oracle.jdbc.driver.T4CConnection@577f5583 (IO Error: Invalid Operation, NOT Connected). Possibly consider using a shorter maxLifetime value.
+2021-05-26 13:45:23,268 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-3] Set<Flight> viewAllFligts()
+2021-05-26 14:37:08,533 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-4] ResponseEntity<List<Schedule>> getScheduleList()
+2021-05-26 14:37:09,254 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-4] List<Schedule> getAllSchedule()
+2021-05-26 14:37:11,520 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-8] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-05-26 14:37:11,655 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-8] Set<Flight> viewAllFligts()
+2021-05-26 14:37:16,168 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-1] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-26 14:37:17,901 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-1] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-26 15:16:59,542 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s545ms226µs900ns).
+2021-05-26 15:20:33,014 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-8] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-26 15:20:33,240 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-8] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 15:20:34,478 INFO com.zaxxer.hikari.HikariDataSource [Thread-8] HikariPool-1 - Shutdown initiated...
+2021-05-26 15:20:36,832 INFO com.zaxxer.hikari.HikariDataSource [Thread-8] HikariPool-1 - Shutdown completed.
+2021-05-26 15:20:43,441 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 12156 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-26 15:20:43,442 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-26 15:20:54,029 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-26 15:20:54,267 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 236 ms. Found 7 JPA repository interfaces.
+2021-05-26 15:20:56,373 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-26 15:20:56,456 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-26 15:20:56,458 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-26 15:20:56,458 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-26 15:20:56,632 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-26 15:20:56,633 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 13178 ms
+2021-05-26 15:20:56,991 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-26 15:20:57,181 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-05-26 15:20:57,182 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-26 15:21:20,333 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-05-26 15:21:20,349 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-26 15:21:29,911 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-26 15:21:29,916 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 15:21:30,053 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-26 15:21:32,101 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-26 15:21:32,384 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-26 15:21:32,673 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-26 15:21:32,903 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-26 15:21:32,912 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-26 15:21:32,913 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-26 15:21:32,916 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-26 15:21:32,928 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-26 15:21:34,010 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 54.301 seconds (JVM running for 7043.776)
+2021-05-26 15:21:34,021 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-26 15:22:18,237 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-18] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-26 15:22:18,250 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-18] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 15:22:18,255 INFO com.zaxxer.hikari.HikariDataSource [Thread-18] HikariPool-2 - Shutdown initiated...
+2021-05-26 15:22:18,735 INFO com.zaxxer.hikari.HikariDataSource [Thread-18] HikariPool-2 - Shutdown completed.
+2021-05-26 15:22:19,594 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 12156 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-26 15:22:19,596 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-26 15:22:22,508 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-26 15:22:22,640 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 131 ms. Found 7 JPA repository interfaces.
+2021-05-26 15:22:23,249 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-26 15:22:23,251 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-26 15:22:23,252 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-26 15:22:23,256 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-26 15:22:23,499 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-26 15:22:23,500 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3896 ms
+2021-05-26 15:22:23,695 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-26 15:22:23,723 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2021-05-26 15:22:23,725 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-26 15:22:23,881 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2021-05-26 15:22:23,886 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-26 15:22:25,057 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-26 15:22:25,059 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 15:22:25,127 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-26 15:22:27,132 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-26 15:22:27,597 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-26 15:22:27,763 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-26 15:22:28,097 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-26 15:22:28,185 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-26 15:22:28,188 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-26 15:22:28,191 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-26 15:22:28,201 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-26 15:22:29,001 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 9.694 seconds (JVM running for 7098.767)
+2021-05-26 15:22:29,366 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-26 15:22:29,975 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-25] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-26 15:22:29,983 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-25] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 15:22:29,986 INFO com.zaxxer.hikari.HikariDataSource [Thread-25] HikariPool-3 - Shutdown initiated...
+2021-05-26 15:22:30,015 INFO com.zaxxer.hikari.HikariDataSource [Thread-25] HikariPool-3 - Shutdown completed.
+2021-05-26 15:22:30,326 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 12156 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-26 15:22:30,328 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-26 15:22:32,820 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-26 15:22:33,002 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 179 ms. Found 7 JPA repository interfaces.
+2021-05-26 15:22:33,473 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-26 15:22:33,476 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-26 15:22:33,476 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-26 15:22:33,477 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-26 15:22:33,620 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-26 15:22:33,621 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3279 ms
+2021-05-26 15:22:33,787 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-26 15:22:33,809 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2021-05-26 15:22:33,810 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-26 15:22:33,965 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2021-05-26 15:22:33,975 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-26 15:22:34,856 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-26 15:22:34,858 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 15:22:34,887 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-26 15:22:35,811 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-26 15:22:35,972 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-26 15:22:36,103 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-26 15:22:36,326 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-26 15:22:36,335 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-26 15:22:36,337 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-26 15:22:36,339 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-26 15:22:36,361 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-26 15:22:36,804 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 6.608 seconds (JVM running for 7106.57)
+2021-05-26 15:22:36,808 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-26 15:22:37,810 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-32] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-26 15:22:37,816 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-32] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 15:22:37,818 INFO com.zaxxer.hikari.HikariDataSource [Thread-32] HikariPool-4 - Shutdown initiated...
+2021-05-26 15:22:37,832 INFO com.zaxxer.hikari.HikariDataSource [Thread-32] HikariPool-4 - Shutdown completed.
+2021-05-26 15:22:38,251 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 12156 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-26 15:22:38,252 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-26 15:22:40,401 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-26 15:22:40,568 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 165 ms. Found 7 JPA repository interfaces.
+2021-05-26 15:22:40,962 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-26 15:22:40,964 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-26 15:22:40,965 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-26 15:22:40,965 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-26 15:22:41,233 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-26 15:22:41,234 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2955 ms
+2021-05-26 15:22:41,371 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-26 15:22:41,388 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2021-05-26 15:22:41,389 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-26 15:22:41,433 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2021-05-26 15:22:41,434 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-26 15:22:42,347 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-26 15:22:42,350 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 15:22:42,406 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-26 15:22:43,358 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-26 15:22:43,520 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-26 15:22:43,650 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-26 15:22:43,871 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-26 15:22:43,882 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-26 15:22:43,885 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-26 15:22:43,888 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-26 15:22:43,902 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-26 15:22:44,506 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 6.516 seconds (JVM running for 7114.272)
+2021-05-26 15:22:44,511 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-26 15:23:26,617 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-26 15:23:26,618 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-26 15:23:26,627 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 9 ms
+2021-05-26 15:23:26,730 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-1] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-26 15:23:26,756 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-1] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-26 15:23:29,321 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-3] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-05-26 15:23:29,331 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-3] Set<Flight> viewAllFligts()
+2021-05-26 15:23:33,587 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-4] ResponseEntity<List<Schedule>> getScheduleList()
+2021-05-26 15:23:33,598 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-4] List<Schedule> getAllSchedule()
+2021-05-26 15:23:51,607 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-6] ResponseEntity<List<Schedule>> getScheduleList()
+2021-05-26 15:23:51,616 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-6] List<Schedule> getAllSchedule()
+2021-05-26 15:23:54,279 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-8] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 15:23:54,291 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-8] List<User> getAllUser()
+2021-05-26 15:24:09,060 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-9] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 15:24:09,064 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-9] List<User> getAllUser()
+2021-05-26 15:24:09,350 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-10] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-26 15:24:09,353 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-10] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-26 15:24:11,276 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-1] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 15:24:11,289 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-1] List<User> getAllUser()
+2021-05-26 15:40:01,046 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-3] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 15:40:11,946 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] List<User> getAllUser()
+2021-05-26 16:24:25,916 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-5 housekeeper] HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=56s616ms901µs800ns).
+2021-05-26 16:25:47,414 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-5 housekeeper] HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=1m21s796ms240µs900ns).
+2021-05-26 16:56:20,352 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-6] ResponseEntity<List<Schedule>> getScheduleList()
+2021-05-26 16:56:20,352 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-5] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 16:56:29,677 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-7] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-26 16:56:32,380 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-6] List<Schedule> getAllSchedule()
+2021-05-26 16:56:32,456 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-7] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-26 16:56:32,456 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-5] List<User> getAllUser()
+2021-05-26 16:56:43,027 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-8] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 16:56:43,030 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-8] List<User> getAllUser()
+2021-05-26 16:57:10,961 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-9] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 16:57:19,251 WARN com.zaxxer.hikari.pool.PoolBase [http-nio-8082-exec-9] HikariPool-5 - Failed to validate connection oracle.jdbc.driver.T4CConnection@787055de (IO Error: Invalid Operation, NOT Connected). Possibly consider using a shorter maxLifetime value.
+2021-05-26 16:57:24,715 WARN com.zaxxer.hikari.pool.PoolBase [http-nio-8082-exec-9] HikariPool-5 - Failed to validate connection oracle.jdbc.driver.T4CConnection@64cdde8d (IO Error: Invalid Operation, NOT Connected). Possibly consider using a shorter maxLifetime value.
+2021-05-26 16:57:29,722 WARN com.zaxxer.hikari.pool.PoolBase [http-nio-8082-exec-9] HikariPool-5 - Failed to validate connection oracle.jdbc.driver.T4CConnection@4a2ef0b (IO Error: Invalid Operation, NOT Connected). Possibly consider using a shorter maxLifetime value.
+2021-05-26 16:57:34,724 WARN com.zaxxer.hikari.pool.PoolBase [http-nio-8082-exec-9] HikariPool-5 - Failed to validate connection oracle.jdbc.driver.T4CConnection@45048723 (IO Error: Invalid Operation, NOT Connected). Possibly consider using a shorter maxLifetime value.
+2021-05-26 16:57:39,727 WARN com.zaxxer.hikari.pool.PoolBase [http-nio-8082-exec-9] HikariPool-5 - Failed to validate connection oracle.jdbc.driver.T4CConnection@fe03e77 (IO Error: Invalid Operation, NOT Connected). Possibly consider using a shorter maxLifetime value.
+2021-05-26 16:57:44,884 WARN com.zaxxer.hikari.pool.PoolBase [http-nio-8082-exec-9] HikariPool-5 - Failed to validate connection oracle.jdbc.driver.T4CConnection@71c4d36c (IO Error: Invalid Operation, NOT Connected). Possibly consider using a shorter maxLifetime value.
+2021-05-26 16:58:07,082 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8082-exec-9] SQL Error: 0, SQLState: 08006
+2021-05-26 16:58:07,449 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8082-exec-9] HikariPool-5 - Connection is not available, request timed out after 35259ms.
+2021-05-26 16:58:07,503 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8082-exec-9] SQL Error: 17002, SQLState: 08006
+2021-05-26 16:58:07,504 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8082-exec-9] IO Error: Invalid Operation, NOT Connected
+2021-05-26 16:59:05,905 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-5 housekeeper] HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=59s93ms634µs700ns).
+2021-05-26 16:59:11,409 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-9] Resolved [org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection]
+2021-05-26 16:59:49,590 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-9] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 16:59:49,594 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-9] List<User> getAllUser()
+2021-05-26 17:14:03,060 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-3] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-26 17:14:03,060 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-2] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 17:14:03,060 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-8] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-05-26 17:14:15,035 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-8] Set<Flight> viewAllFligts()
+2021-05-26 17:14:15,082 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-3] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-26 17:14:15,263 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-2] List<User> getAllUser()
+2021-05-26 17:15:26,340 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-9] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 17:15:26,366 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-9] List<User> getAllUser()
+2021-05-26 17:17:44,457 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-7] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-26 17:17:44,493 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-7] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-26 17:17:52,943 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-3] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-05-26 17:17:52,948 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-3] Set<Flight> viewAllFligts()
+2021-05-26 17:18:03,770 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-5] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 17:18:03,798 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-5] List<User> getAllUser()
+2021-05-26 17:18:49,347 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-11] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 17:18:49,387 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-11] List<User> getAllUser()
+2021-05-26 17:24:34,096 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-12] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 17:24:34,549 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-12] List<User> getAllUser()
+2021-05-26 17:25:40,439 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-8] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 17:25:40,586 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-8] List<User> getAllUser()
+2021-05-26 18:07:00,987 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-3] ResponseEntity<List<User>> viewAllAirport()
+2021-05-26 18:07:01,873 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] List<User> getAllUser()
+2021-05-26 18:25:04,546 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(311)-127.0.0.1] Application shutdown requested.
+2021-05-26 18:25:05,484 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(311)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-26 18:25:05,538 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(311)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-26 18:25:05,631 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(311)-127.0.0.1] HikariPool-5 - Shutdown initiated...
+2021-05-26 18:25:06,456 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(311)-127.0.0.1] HikariPool-5 - Shutdown completed.

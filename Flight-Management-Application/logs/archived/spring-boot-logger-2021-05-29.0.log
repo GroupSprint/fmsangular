@@ -1,0 +1,983 @@
+2021-05-29 12:15:46,192 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-29 12:15:46,188 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 12584 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 12:15:46,236 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 12:15:46,826 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\S\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/S/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-29 12:15:46,828 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-29 12:15:46,829 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-29 12:15:54,541 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 12:15:55,129 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 501 ms. Found 7 JPA repository interfaces.
+2021-05-29 12:15:58,516 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 12:15:58,588 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 12:15:58,590 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 12:15:58,591 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 12:15:59,189 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 12:15:59,191 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 12360 ms
+2021-05-29 12:16:00,486 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 12:16:00,892 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 12:16:01,655 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 12:16:02,318 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-29 12:16:02,331 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 12:16:08,267 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-29 12:16:08,403 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 12:16:15,645 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 12:16:15,702 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 12:16:15,870 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 12:16:18,293 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date'!
+2021-05-29 12:16:18,304 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 12:16:18,321 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2021-05-29 12:16:18,904 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2021-05-29 12:16:18,912 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-05-29 12:16:18,982 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-29 12:16:19,191 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date'!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 40 common frames omitted
+Caused by: java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date'!
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.assertParameterNamesInAnnotatedQuery(JpaQueryMethod.java:172)
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.<init>(JpaQueryMethod.java:139)
+	at org.springframework.data.jpa.repository.query.DefaultJpaQueryMethodFactory.build(DefaultJpaQueryMethodFactory.java:44)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1056)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85)
+	at java.base/java.util.Optional.map(Optional.java:258)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 50 common frames omitted
+2021-05-29 12:17:42,985 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 6488 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 12:17:42,985 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-29 12:17:43,000 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 12:17:43,767 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\S\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/S/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-29 12:17:43,778 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-29 12:17:43,782 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-29 12:17:47,777 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 12:17:48,124 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 303 ms. Found 7 JPA repository interfaces.
+2021-05-29 12:17:50,421 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 12:17:50,465 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 12:17:50,468 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 12:17:50,469 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 12:17:50,843 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 12:17:50,844 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7059 ms
+2021-05-29 12:17:51,461 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 12:17:51,665 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 12:17:52,136 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 12:17:52,531 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-29 12:17:52,544 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 12:17:54,930 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-29 12:17:55,320 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 12:18:04,614 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 12:18:04,675 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 12:18:04,825 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 12:18:07,119 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date1'!
+2021-05-29 12:18:07,125 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 12:18:07,140 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2021-05-29 12:18:07,184 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2021-05-29 12:18:07,192 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-05-29 12:18:07,364 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-29 12:18:07,521 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date1'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date1'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date1'!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 40 common frames omitted
+Caused by: java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schedule.departureTime =: date1'!
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.assertParameterNamesInAnnotatedQuery(JpaQueryMethod.java:172)
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.<init>(JpaQueryMethod.java:139)
+	at org.springframework.data.jpa.repository.query.DefaultJpaQueryMethodFactory.build(DefaultJpaQueryMethodFactory.java:44)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1056)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85)
+	at java.base/java.util.Optional.map(Optional.java:258)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 50 common frames omitted
+2021-05-29 12:24:42,538 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 6420 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 12:24:42,525 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-29 12:24:42,556 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 12:24:42,871 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\S\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/S/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-29 12:24:42,872 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-29 12:24:42,873 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-29 12:24:47,958 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 12:24:48,305 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 313 ms. Found 7 JPA repository interfaces.
+2021-05-29 12:24:50,770 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 12:24:50,825 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 12:24:50,827 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 12:24:50,828 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 12:24:51,291 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 12:24:51,292 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 8416 ms
+2021-05-29 12:24:51,941 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 12:24:52,260 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 12:24:52,862 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 12:24:53,283 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-29 12:24:53,295 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 12:24:54,336 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-29 12:24:54,419 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 12:25:18,674 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 12:25:18,940 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 12:25:19,108 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 12:25:21,908 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+2021-05-29 12:25:21,913 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 12:25:21,925 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2021-05-29 12:25:21,981 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2021-05-29 12:25:21,988 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-05-29 12:25:22,071 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-29 12:25:22,176 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 40 common frames omitted
+Caused by: java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.assertParameterNamesInAnnotatedQuery(JpaQueryMethod.java:172)
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.<init>(JpaQueryMethod.java:139)
+	at org.springframework.data.jpa.repository.query.DefaultJpaQueryMethodFactory.build(DefaultJpaQueryMethodFactory.java:44)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1056)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85)
+	at java.base/java.util.Optional.map(Optional.java:258)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 50 common frames omitted
+2021-05-29 13:02:19,226 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11876 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 13:02:19,308 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 13:02:20,894 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-29 13:02:23,384 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\S\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/S/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-29 13:02:23,390 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-29 13:02:23,392 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-29 13:02:41,133 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 13:02:42,097 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 908 ms. Found 7 JPA repository interfaces.
+2021-05-29 13:02:46,438 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 13:02:46,525 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 13:02:46,527 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 13:02:46,529 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 13:02:49,515 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 13:02:49,517 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 25906 ms
+2021-05-29 13:02:50,711 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 13:02:51,224 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 13:02:52,351 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 13:02:53,028 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-29 13:02:53,039 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 13:02:58,288 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-29 13:02:58,513 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 13:03:25,384 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 13:03:25,591 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 13:03:25,785 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 13:03:27,696 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+2021-05-29 13:03:27,701 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 13:03:27,713 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2021-05-29 13:03:27,954 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2021-05-29 13:03:27,960 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-05-29 13:03:28,009 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-29 13:03:28,207 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 40 common frames omitted
+Caused by: java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.assertParameterNamesInAnnotatedQuery(JpaQueryMethod.java:172)
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.<init>(JpaQueryMethod.java:139)
+	at org.springframework.data.jpa.repository.query.DefaultJpaQueryMethodFactory.build(DefaultJpaQueryMethodFactory.java:44)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1056)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85)
+	at java.base/java.util.Optional.map(Optional.java:258)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 50 common frames omitted
+2021-05-29 13:46:34,400 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-29 13:46:34,703 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 5172 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 13:46:34,708 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 13:46:35,249 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\S\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/S/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-29 13:46:35,250 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-29 13:46:35,252 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-29 13:46:41,885 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 13:46:42,595 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 604 ms. Found 7 JPA repository interfaces.
+2021-05-29 13:46:47,682 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 13:46:47,844 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 13:46:47,846 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 13:46:47,848 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 13:46:48,545 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 13:46:48,547 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 13292 ms
+2021-05-29 13:46:50,048 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 13:46:50,386 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 13:46:52,280 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 13:46:52,937 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-29 13:46:52,967 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 13:46:57,430 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-29 13:46:57,590 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 13:47:07,630 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 13:47:07,749 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 13:47:07,944 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 13:47:10,517 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+2021-05-29 13:47:10,521 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 13:47:10,532 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2021-05-29 13:47:10,726 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2021-05-29 13:47:10,735 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-05-29 13:47:10,821 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-29 13:47:11,111 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.cg.flightmgmt.FlightManagementApplication.main(FlightManagementApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'scheduledFlightService': Unsatisfied dependency expressed through field 'scheduleflightrepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IScheduledFlightRepository' defined in com.cg.flightmgmt.repository.IScheduledFlightRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 40 common frames omitted
+Caused by: java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.cg.flightmgmt.repository.IScheduledFlightRepository.viewAllScheduledFlightsbyAirport(java.lang.String,java.lang.String,java.util.Date) but parameter 'Optional[date1]' not found in annotated query 'select s from ScheduledFlight s where s.schedule.sourceAirport.airportLocation =:sAirport and s.schedule.destinationAirport.airportLocation=:dAirport  and s.schdate =: date1'!
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.assertParameterNamesInAnnotatedQuery(JpaQueryMethod.java:172)
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.<init>(JpaQueryMethod.java:139)
+	at org.springframework.data.jpa.repository.query.DefaultJpaQueryMethodFactory.build(DefaultJpaQueryMethodFactory.java:44)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:81)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:100)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:93)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1056)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:85)
+	at java.base/java.util.Optional.map(Optional.java:258)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:85)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:303)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 50 common frames omitted
+2021-05-29 13:51:32,381 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11260 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 13:51:32,412 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 13:51:32,496 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2021-05-29 13:51:32,625 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\S\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/S/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2021-05-29 13:51:32,627 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-29 13:51:32,628 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-29 13:51:37,038 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 13:51:37,382 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 315 ms. Found 7 JPA repository interfaces.
+2021-05-29 13:51:41,252 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 13:51:41,335 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 13:51:41,337 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 13:51:41,338 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 13:51:41,987 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 13:51:41,988 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 9357 ms
+2021-05-29 13:51:43,149 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 13:51:43,663 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-29 13:51:45,093 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-29 13:51:45,662 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-05-29 13:51:45,673 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 13:51:49,985 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-05-29 13:51:50,439 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 13:51:57,649 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 13:51:57,740 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 13:51:57,908 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 13:52:01,721 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 13:52:03,289 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 13:52:05,053 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 13:52:06,343 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-29 13:52:06,731 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-29 13:52:06,738 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-29 13:52:07,121 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-29 13:52:07,375 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-29 13:52:09,627 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 39.527 seconds (JVM running for 42.476)
+2021-05-29 13:52:29,577 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 13:52:29,578 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 13:52:29,582 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
+2021-05-29 13:53:26,440 INFO com.cg.flightmgmt.controller.AirportController [http-nio-8082-exec-5] ResponseEntity<Airport> addAirport()
+2021-05-29 13:53:26,473 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-5] Airport addAirport()
+2021-05-29 13:53:49,426 INFO com.cg.flightmgmt.controller.AirportController [http-nio-8082-exec-1] ResponseEntity<Airport> addAirport()
+2021-05-29 13:53:49,430 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-1] Airport addAirport()
+2021-05-29 13:54:09,545 INFO com.cg.flightmgmt.controller.AirportController [http-nio-8082-exec-2] ResponseEntity<Airport> viewAirport()
+2021-05-29 13:54:09,551 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-2] Airport viewAirport()
+2021-05-29 13:55:23,107 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-3] ResponseEntity<User> addUser()
+2021-05-29 13:55:23,128 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-3] User addUser()
+2021-05-29 13:56:00,731 INFO com.cg.flightmgmt.controller.PassengerController [http-nio-8082-exec-10] ResponseEntity<Passenger> addPassenger()
+2021-05-29 13:56:00,798 INFO com.cg.flightmgmt.service.PassengerService [http-nio-8082-exec-10] Passenger addPassenger()
+2021-05-29 13:58:29,478 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-9] ResponseEntity<Flight> addFlight()
+2021-05-29 13:58:29,506 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-9] Flight addFlight()
+2021-05-29 13:58:41,412 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-1] ResponseEntity<Flight> addFlight()
+2021-05-29 13:58:41,416 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-1] Flight addFlight()
+2021-05-29 13:59:55,257 INFO com.cg.flightmgmt.controller.AirportController [http-nio-8082-exec-2] ResponseEntity<List<Airport>> viewAllAirports()
+2021-05-29 13:59:55,279 INFO com.cg.flightmgmt.service.AirportService [http-nio-8082-exec-2] List<Airport> viewAirportList()
+2021-05-29 14:00:11,248 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (PushbackInputStream); line: 9, column: 18]]
+2021-05-29 14:01:01,395 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value
+ at [Source: (PushbackInputStream); line: 9, column: 18]]
+2021-05-29 14:06:11,577 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-8] ResponseEntity<Schedule> addSchedule()
+2021-05-29 14:06:11,943 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-8] Schedule addSchedule()
+2021-05-29 14:06:34,301 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-3] ResponseEntity<List<Schedule>> getScheduleList()
+2021-05-29 14:06:34,308 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-3] List<Schedule> getAllSchedule()
+2021-05-29 14:08:10,805 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-10] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-05-29 14:08:10,810 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-10] Set<Flight> viewAllFligts()
+2021-05-29 14:08:56,528 INFO com.cg.flightmgmt.controller.ScheduleController [http-nio-8082-exec-9] ResponseEntity<List<Schedule>> getScheduleList()
+2021-05-29 14:08:56,535 INFO com.cg.flightmgmt.service.ScheduleService [http-nio-8082-exec-9] List<Schedule> getAllSchedule()
+2021-05-29 14:09:25,093 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-7] ResponseEntity<ScheduledFlight> addScheduledFlight()
+2021-05-29 14:09:25,133 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-7] ScheduledFlight addFlightSchedule()
+2021-05-29 14:10:58,791 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-6] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-29 14:10:58,801 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-6] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-29 14:13:05,553 INFO com.cg.flightmgmt.controller.PassengerController [http-nio-8082-exec-3] ResponseEntity<List<Passenger>> getAllPassengers()
+2021-05-29 14:13:05,557 INFO com.cg.flightmgmt.service.PassengerService [http-nio-8082-exec-3] List<Passenger> getAllPassengers()
+2021-05-29 14:13:44,008 INFO com.cg.flightmgmt.controller.UserController [http-nio-8082-exec-10] ResponseEntity<List<User>> viewAllAirport()
+2021-05-29 14:13:44,032 INFO com.cg.flightmgmt.service.UserService [http-nio-8082-exec-10] List<User> getAllUser()
+2021-05-29 14:14:02,150 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-9] ResponseEntity<Booking> addBooking()
+2021-05-29 14:14:02,167 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-9] Booking addBooking()
+2021-05-29 14:14:51,453 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-7] ResponseEntity<Booking> viewBooking()
+2021-05-29 14:14:51,458 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-7] Booking viewBooking()
+2021-05-29 14:20:18,480 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-8] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:20:18,499 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-8] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:20:18,743 INFO com.zaxxer.hikari.HikariDataSource [Thread-8] HikariPool-1 - Shutdown initiated...
+2021-05-29 14:20:19,862 INFO com.zaxxer.hikari.HikariDataSource [Thread-8] HikariPool-1 - Shutdown completed.
+2021-05-29 14:20:21,673 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11260 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 14:20:21,674 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 14:20:24,253 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 14:20:24,423 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 167 ms. Found 7 JPA repository interfaces.
+2021-05-29 14:20:25,106 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 14:20:25,108 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:20:25,109 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 14:20:25,110 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 14:20:25,300 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 14:20:25,300 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3605 ms
+2021-05-29 14:20:25,533 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 14:20:25,577 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-05-29 14:20:25,578 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 14:20:26,737 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-05-29 14:20:26,739 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 14:20:28,917 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 14:20:28,919 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:20:28,973 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 14:20:29,969 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 14:20:30,161 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 14:20:30,321 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:20:30,546 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:20:30,555 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-29 14:20:30,557 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-29 14:20:30,559 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-29 14:20:30,570 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-29 14:20:31,102 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 9.903 seconds (JVM running for 1743.952)
+2021-05-29 14:20:31,108 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 14:21:33,862 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 14:21:33,863 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 14:21:33,867 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 3 ms
+2021-05-29 14:21:33,873 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-1] ResponseEntity<ScheduledFlight> deleteScheduledFlightById()
+2021-05-29 14:21:33,888 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-1] ScheduledFlight removeFlightSchedule()
+2021-05-29 14:21:56,902 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-3] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-29 14:21:56,906 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-3] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-29 14:22:42,021 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-8] ResponseEntity<Booking> getAllBookings()
+2021-05-29 14:22:42,055 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-8] List<Booking> getAllBookings()
+2021-05-29 14:23:15,590 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-3] ResponseEntity<Booking> cancelBooking()
+2021-05-29 14:23:15,602 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-3] Booking cancelBooking()
+2021-05-29 14:23:23,179 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-4] ResponseEntity<Booking> getAllBookings()
+2021-05-29 14:23:23,182 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-4] List<Booking> getAllBookings()
+2021-05-29 14:23:23,221 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-4] Resolved [com.cg.flightmgmt.exception.BookingNotFoundException: Booking Not Found]
+2021-05-29 14:24:11,526 INFO com.cg.flightmgmt.controller.FlightController [http-nio-8082-exec-7] ResponseEntity<Set<Flight>> viewAllFlights()
+2021-05-29 14:24:11,544 INFO com.cg.flightmgmt.service.FlightService [http-nio-8082-exec-7] Set<Flight> viewAllFligts()
+2021-05-29 14:25:41,047 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-5] ResponseEntity<ScheduledFlight> addScheduledFlight()
+2021-05-29 14:25:41,050 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-5] ScheduledFlight addFlightSchedule()
+2021-05-29 14:26:38,193 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-10] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-29 14:26:38,198 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-10] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-29 14:28:39,826 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-3] ResponseEntity<Booking> addBooking()
+2021-05-29 14:28:39,830 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-3] Booking addBooking()
+2021-05-29 14:28:40,502 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8082-exec-3] SQL Error: 2291, SQLState: 23000
+2021-05-29 14:28:40,503 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8082-exec-3] ORA-02291: integrity constraint (FMS.FKFGVUN0AMYVOVIY0GC6TEAWO16) violated - parent key not found
+
+2021-05-29 14:28:40,636 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [FMS.FKFGVUN0AMYVOVIY0GC6TEAWO16]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2021-05-29 14:29:59,945 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-6] ResponseEntity<Booking> addBooking()
+2021-05-29 14:29:59,967 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-6] Booking addBooking()
+2021-05-29 14:31:58,993 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-2] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-29 14:31:58,999 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-2] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-29 14:32:33,887 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-9] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable java.util.Date] for value '2021-05-29T08:53:36.126+00:00'; nested exception is java.lang.IllegalArgumentException]
+2021-05-29 14:32:50,508 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-5] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable java.util.Date] for value '2021-05-29T08:53:36'; nested exception is java.lang.IllegalArgumentException]
+2021-05-29 14:32:59,376 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-8] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable java.util.Date] for value '2021-05-29T08:53:36'; nested exception is java.lang.IllegalArgumentException]
+2021-05-29 14:33:16,590 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-10] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable java.util.Date] for value '2021-05-29'; nested exception is java.lang.IllegalArgumentException]
+2021-05-29 14:38:03,244 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-30] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:38:03,268 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-30] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:38:03,298 INFO com.zaxxer.hikari.HikariDataSource [Thread-30] HikariPool-2 - Shutdown initiated...
+2021-05-29 14:38:03,905 INFO com.zaxxer.hikari.HikariDataSource [Thread-30] HikariPool-2 - Shutdown completed.
+2021-05-29 14:38:04,675 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11260 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 14:38:04,677 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 14:38:06,952 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 14:38:07,152 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 198 ms. Found 7 JPA repository interfaces.
+2021-05-29 14:38:08,442 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 14:38:08,444 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:38:08,445 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 14:38:08,446 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 14:38:08,783 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 14:38:08,784 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4096 ms
+2021-05-29 14:38:08,980 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 14:38:09,008 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2021-05-29 14:38:09,009 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 14:38:09,470 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2021-05-29 14:38:09,471 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 14:38:10,495 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 14:38:10,497 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:38:10,559 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 14:38:11,909 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 14:38:12,097 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 14:38:12,251 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:38:12,487 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:38:12,496 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-29 14:38:12,498 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-29 14:38:12,501 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-29 14:38:12,513 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-29 14:38:13,028 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 8.556 seconds (JVM running for 2805.878)
+2021-05-29 14:38:13,033 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 14:38:57,328 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-48] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:38:57,346 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-48] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:38:57,348 INFO com.zaxxer.hikari.HikariDataSource [Thread-48] HikariPool-3 - Shutdown initiated...
+2021-05-29 14:38:57,421 INFO com.zaxxer.hikari.HikariDataSource [Thread-48] HikariPool-3 - Shutdown completed.
+2021-05-29 14:38:58,122 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11260 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 14:38:58,125 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 14:39:00,568 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 14:39:00,699 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 129 ms. Found 7 JPA repository interfaces.
+2021-05-29 14:39:01,092 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 14:39:01,094 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:39:01,094 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 14:39:01,095 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 14:39:01,201 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 14:39:01,201 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3069 ms
+2021-05-29 14:39:01,348 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 14:39:01,371 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2021-05-29 14:39:01,372 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 14:39:01,441 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2021-05-29 14:39:01,444 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 14:39:02,236 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 14:39:02,237 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:39:02,298 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 14:39:03,135 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 14:39:03,285 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 14:39:03,431 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:39:03,862 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:39:03,879 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-29 14:39:03,882 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-29 14:39:03,884 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-29 14:39:03,901 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-29 14:39:04,485 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 6.674 seconds (JVM running for 2857.334)
+2021-05-29 14:39:04,490 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 14:39:37,183 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-54] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:39:37,189 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-54] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:39:37,191 INFO com.zaxxer.hikari.HikariDataSource [Thread-54] HikariPool-4 - Shutdown initiated...
+2021-05-29 14:39:37,223 INFO com.zaxxer.hikari.HikariDataSource [Thread-54] HikariPool-4 - Shutdown completed.
+2021-05-29 14:39:37,679 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11260 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 14:39:37,680 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 14:39:39,201 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 14:39:39,301 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 98 ms. Found 7 JPA repository interfaces.
+2021-05-29 14:39:39,627 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 14:39:39,629 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:39:39,629 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 14:39:39,630 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 14:39:39,760 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 14:39:39,760 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2058 ms
+2021-05-29 14:39:39,917 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 14:39:39,936 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2021-05-29 14:39:39,937 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 14:39:39,990 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2021-05-29 14:39:39,991 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 14:39:40,654 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 14:39:40,656 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:39:40,709 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 14:39:41,616 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 14:39:41,778 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 14:39:41,952 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:39:42,203 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:39:42,227 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-29 14:39:42,229 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-29 14:39:42,231 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-29 14:39:42,246 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-29 14:39:42,743 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 5.274 seconds (JVM running for 2895.593)
+2021-05-29 14:39:42,749 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 14:40:21,944 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-61] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:40:21,951 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-61] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:40:21,953 INFO com.zaxxer.hikari.HikariDataSource [Thread-61] HikariPool-5 - Shutdown initiated...
+2021-05-29 14:40:21,975 INFO com.zaxxer.hikari.HikariDataSource [Thread-61] HikariPool-5 - Shutdown completed.
+2021-05-29 14:40:22,482 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11260 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 14:40:22,485 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 14:40:23,735 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 14:40:23,843 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 106 ms. Found 7 JPA repository interfaces.
+2021-05-29 14:40:24,175 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 14:40:24,177 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:40:24,178 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 14:40:24,178 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 14:40:24,310 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 14:40:24,310 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1817 ms
+2021-05-29 14:40:24,457 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 14:40:24,472 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-6 - Starting...
+2021-05-29 14:40:24,475 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 14:40:24,539 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-6 - Start completed.
+2021-05-29 14:40:24,540 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 14:40:25,543 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 14:40:25,545 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:40:25,594 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 14:40:26,711 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 14:40:26,850 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 14:40:27,057 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:40:27,277 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:40:27,287 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-29 14:40:27,288 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-29 14:40:27,290 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-29 14:40:27,301 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-29 14:40:27,849 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 5.581 seconds (JVM running for 2940.698)
+2021-05-29 14:40:27,853 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 14:40:45,257 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 14:40:45,258 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 14:40:45,261 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 3 ms
+2021-05-29 14:42:03,518 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-1] ResponseEntity<ScheduledFlight> deleteScheduledFlightById()
+2021-05-29 14:42:03,534 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-1] ScheduledFlight removeFlightSchedule()
+2021-05-29 14:42:28,840 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-7] ResponseEntity<Booking> getAllBookings()
+2021-05-29 14:42:28,858 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-7] List<Booking> getAllBookings()
+2021-05-29 14:42:29,100 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-10] ResponseEntity<Booking> getAllBookings()
+2021-05-29 14:42:29,101 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-10] List<Booking> getAllBookings()
+2021-05-29 14:42:45,059 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-9] ResponseEntity<Booking> cancelBooking()
+2021-05-29 14:42:45,065 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-9] Booking cancelBooking()
+2021-05-29 14:42:57,862 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-3] ResponseEntity<Booking> cancelBooking()
+2021-05-29 14:42:57,865 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-3] Booking cancelBooking()
+2021-05-29 14:42:57,896 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [com.cg.flightmgmt.exception.BookingNotFoundException: Booking is not removed]
+2021-05-29 14:43:08,957 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-1] ResponseEntity<Booking> getAllBookings()
+2021-05-29 14:43:08,961 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-1] List<Booking> getAllBookings()
+2021-05-29 14:43:09,000 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-1] Resolved [com.cg.flightmgmt.exception.BookingNotFoundException: Booking Not Found]
+2021-05-29 14:43:17,287 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-4] ResponseEntity<Booking> getAllBookings()
+2021-05-29 14:43:17,331 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-4] List<Booking> getAllBookings()
+2021-05-29 14:43:17,337 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-4] Resolved [com.cg.flightmgmt.exception.BookingNotFoundException: Booking Not Found]
+2021-05-29 14:43:17,769 INFO com.cg.flightmgmt.controller.BookingController [http-nio-8082-exec-7] ResponseEntity<Booking> getAllBookings()
+2021-05-29 14:43:17,771 INFO com.cg.flightmgmt.service.FlightBookingService [http-nio-8082-exec-7] List<Booking> getAllBookings()
+2021-05-29 14:43:17,778 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-7] Resolved [com.cg.flightmgmt.exception.BookingNotFoundException: Booking Not Found]
+2021-05-29 14:43:44,978 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-8] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-29 14:43:44,981 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-8] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-29 14:46:16,151 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-67] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:46:16,160 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-67] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:46:16,189 INFO com.zaxxer.hikari.HikariDataSource [Thread-67] HikariPool-6 - Shutdown initiated...
+2021-05-29 14:46:16,649 INFO com.zaxxer.hikari.HikariDataSource [Thread-67] HikariPool-6 - Shutdown completed.
+2021-05-29 14:46:19,397 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11260 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 14:46:19,398 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 14:46:21,119 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 14:46:21,222 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 101 ms. Found 7 JPA repository interfaces.
+2021-05-29 14:46:21,567 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 14:46:21,569 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:46:21,569 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 14:46:21,570 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 14:46:21,680 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 14:46:21,680 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2276 ms
+2021-05-29 14:46:21,920 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 14:46:21,941 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-7 - Starting...
+2021-05-29 14:46:21,942 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 14:46:22,860 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-7 - Start completed.
+2021-05-29 14:46:22,861 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 14:46:24,115 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 14:46:24,117 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 14:46:24,151 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 14:46:24,914 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 14:46:25,086 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 14:46:25,196 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 14:46:25,377 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-29 14:46:25,388 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-29 14:46:25,390 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-29 14:46:25,391 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-29 14:46:25,402 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-29 14:46:25,863 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 6.705 seconds (JVM running for 3298.713)
+2021-05-29 14:46:25,868 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 14:47:13,849 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 14:47:13,850 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 14:47:13,854 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 3 ms
+2021-05-29 14:48:29,034 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-8] ResponseEntity<ScheduledFlight> addScheduledFlight()
+2021-05-29 14:48:29,050 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-8] ScheduledFlight addFlightSchedule()
+2021-05-29 14:49:09,145 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-7] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-05-29 15:01:20,137 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-10] ResponseEntity<ScheduledFlight> viewAllScheduledFlight()
+2021-05-29 15:01:23,636 INFO com.cg.flightmgmt.service.ScheduledFlightService [http-nio-8082-exec-10] List<ScheduledFlight> viewAllScheduledFlights()
+2021-05-29 15:02:44,588 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-2] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-05-29 15:10:19,766 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-7 housekeeper] HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=1m32s166ms957µs800ns).
+2021-05-29 15:10:55,130 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-7 housekeeper] HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=2m20s63ms182µs).
+2021-05-29 15:15:55,200 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-5] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-05-29 15:17:25,562 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-4] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'date1' for method parameter type LocalDate is not present]
+2021-05-29 15:18:19,725 INFO com.cg.flightmgmt.controller.ScheduledFlightController [http-nio-8082-exec-1] ResponseEntity<ScheduledFlight> viewAllScheduledFlightsbyAirport()
+2021-05-29 16:47:32,697 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-81] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-29 16:47:33,591 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-81] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 16:47:35,282 INFO com.zaxxer.hikari.HikariDataSource [Thread-81] HikariPool-7 - Shutdown initiated...
+2021-05-29 16:47:35,899 INFO com.zaxxer.hikari.HikariDataSource [Thread-81] HikariPool-7 - Shutdown completed.
+2021-05-29 16:48:25,106 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting FlightManagementApplication using Java 15.0.2 on DESKTOP-A62DDGV with PID 11260 (C:\Users\S\eclipse-workspace\Flight-Management-Application\target\classes started by S in C:\Users\S\eclipse-workspace\Flight-Management-Application)
+2021-05-29 16:48:25,107 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 16:48:36,832 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-29 16:48:37,601 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 722 ms. Found 7 JPA repository interfaces.
+2021-05-29 16:51:39,535 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8082 (http)
+2021-05-29 16:51:39,541 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2021-05-29 16:51:39,542 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 16:51:39,542 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-29 16:51:40,979 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 16:51:40,980 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 195779 ms
+2021-05-29 16:51:42,947 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-29 16:51:43,854 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Starting...
+2021-05-29 16:51:43,855 WARN com.zaxxer.hikari.util.DriverDataSource [restartedMain] Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2021-05-29 16:51:48,665 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Start completed.
+2021-05-29 16:51:49,334 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-05-29 16:53:05,317 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-29 16:53:05,341 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 16:53:05,560 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 16:53:10,908 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-29 16:53:12,061 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-29 16:53:14,468 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-29 16:53:15,162 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2021-05-29 16:53:15,397 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8082 (http) with context path ''
+2021-05-29 16:53:15,414 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2021-05-29 16:53:15,480 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2021-05-29 16:53:15,504 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2021-05-29 16:53:16,929 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started FlightManagementApplication in 295.231 seconds (JVM running for 10909.779)
+2021-05-29 16:53:16,934 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 17:10:05,990 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-8 housekeeper] HikariPool-8 - Thread starvation or clock leap detected (housekeeper delta=46s649ms461µs300ns).
+2021-05-29 17:30:53,356 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8082-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 17:30:53,698 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-05-29 17:30:56,521 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8082-exec-2] Completed initialization in 2780 ms
+2021-05-29 17:31:02,813 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8082-exec-3] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.cg.flightmgmt.dto.User> com.cg.flightmgmt.controller.UserController.addUser(com.cg.flightmgmt.dto.User) with 7 errors: [Field error in object 'user' on field 'email': rejected value []; codes [NotEmpty.user.email,NotEmpty.email,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email]]; default message [Email should not be empty]] [Field error in object 'user' on field 'password': rejected value []; codes [NotEmpty.user.password,NotEmpty.password,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password]]; default message [Password should not be empty]] [Field error in object 'user' on field 'mobileNumber': rejected value []; codes [Size.user.mobileNumber,Size.mobileNumber,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.mobileNumber,mobileNumber]; arguments []; default message [mobileNumber],10,10]; default message [Should be exact 10 chars]] [Field error in object 'user' on field 'userName': rejected value []; codes [NotEmpty.user.userName,NotEmpty.userName,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.userName,userName]; arguments []; default message [userName]]; default message [userName should not be empty]] [Field error in object 'user' on field 'mobileNumber': rejected value []; codes [NotEmpty.user.mobileNumber,NotEmpty.mobileNumber,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.mobileNumber,mobileNumber]; arguments []; default message [mobileNumber]]; default message [Mobile should not be empty]] [Field error in object 'user' on field 'userName': rejected value []; codes [Size.user.userName,Size.userName,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.userName,userName]; arguments []; default message [userName],2147483647,2]; default message [Should be more than 2 chars]] [Field error in object 'user' on field 'password': rejected value []; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,6]; default message [Should be more than 6 chars]] ]
+2021-05-29 18:07:32,802 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(117)-127.0.0.1] Application shutdown requested.
+2021-05-29 18:07:34,585 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [RMI TCP Connection(117)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-29 18:07:34,861 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(117)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-29 18:07:35,004 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(117)-127.0.0.1] HikariPool-8 - Shutdown initiated...
+2021-05-29 18:07:36,260 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(117)-127.0.0.1] HikariPool-8 - Shutdown completed.
